@@ -1,0 +1,37 @@
+{
+	"name": "bleubleu-chocotte-nuxt-boilerplate",
+	"type": "module",
+	"version": "1.0.0",
+	"private": true,
+	"packageManager": "pnpm@9.2.0",
+	"author": "Thomas Auffroy <thomas@bleubleu.studio> (https://thomas-auffroy.dev)",
+	"engines": {
+		"node": ">=22.8.0"
+	},
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"typecheck": "nuxi typecheck"
+	},
+	"dependencies": {
+		"@nuxtjs/robots": "4.1.6",
+		"@nuxtjs/sitemap": "6.0.1",
+		"@vueuse/core": "11.0.3",
+		"@vueuse/nuxt": "11.0.3",
+		"nuxt": "3.13.1",
+		"vue": "3.5.2",
+		"vue-router": "4.4.3"
+	},
+	"devDependencies": {
+		"@antfu/eslint-config": "3.2.2",
+		"@nuxt/devtools": "1.4.1",
+		"eslint": "9.9.1",
+		"eslint-plugin-format": "0.1.2",
+		"sass": "1.78.0"
+	}
+}
