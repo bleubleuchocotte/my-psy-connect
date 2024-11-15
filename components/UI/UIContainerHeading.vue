@@ -13,17 +13,16 @@
 .ui-container-heading {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
+	text-align: center;
 
 	@include gap(40);
 
 	&__content {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
-		text-align: center;
 
 		@include gap(24);
 	}
