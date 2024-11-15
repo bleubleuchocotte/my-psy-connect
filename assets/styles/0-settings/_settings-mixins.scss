@@ -8,44 +8,72 @@
 
 @mixin font($font) {
 	@if ($font == "fs-14-500") {
-		font-size: pxToRem(14);
-		font-weight: 500;
+		& {
+			font-size: pxToRem(14);
+			line-height: normal;
+			font-weight: 500;
+		}
 	} @else if ($font == "fs-16-500") {
-		font-size: pxToRem(16);
-		line-height: pxToRem(21);
-		font-weight: 600;
+		& {
+			font-size: pxToRem(16);
+			line-height: pxToRem(21);
+			font-weight: 600;
+		}
 	} @else if ($font == "fs-16-600") {
-		font-size: pxToRem(16);
-		font-weight: 600;
+		& {
+			font-size: pxToRem(16);
+			line-height: normal;
+			font-weight: 600;
+		}
 	} @else if ($font == "fs-20-600") {
-		font-size: pxToRem(20);
-		line-height: pxToRem(21);
-		font-weight: 600;
+		& {
+			font-size: pxToRem(20);
+			line-height: pxToRem(21);
+			font-weight: 600;
+		}
 	} @else if ($font == "fs-25-600") {
-		font-size: pxToRem(25);
-		font-weight: 600;
+		& {
+			font-size: pxToRem(25);
+			line-height: normal;
+			font-weight: 600;
+		}
 	} @else if ($font == "fs-30-600") {
-		font-size: pxToRem(30);
-		font-weight: 600;
+		& {
+			font-size: pxToRem(30);
+			line-height: normal;
+			font-weight: 600;
+		}
 	} @else if ($font == "fs-35-600") {
-		font-size: pxToRem(35);
-		line-height: pxToRem(39);
-		font-weight: 600;
+		& {
+			font-size: pxToRem(35);
+			line-height: pxToRem(39);
+			font-weight: 600;
+		}
 	} @else if ($font == "fs-40-600") {
-		font-size: pxToRem(40);
-		font-weight: 600;
+		& {
+			font-size: pxToRem(40);
+			line-height: normal;
+			font-weight: 600;
+		}
 	} @else if ($font == "fs-45-600") {
-		font-size: pxToRem(45);
-		line-height: pxToRem(48);
-		font-weight: 600;
+		& {
+			font-size: pxToRem(45);
+			line-height: pxToRem(48);
+			font-weight: 600;
+		}
 	} @else if ($font == "fs-80-600") {
-		font-size: pxToRem(80);
-		font-weight: 600;
+		& {
+			font-size: pxToRem(80);
+			line-height: normal;
+			font-weight: 600;
+		}
 	}
 }
 
 @mixin prop($property, $px, $important: null) {
-	#{$property}: pxToRem($px) $important;
+	& {
+		#{$property}: pxToRem($px) $important;
+	}
 }
 
 @mixin padding($px: 1, $important: null) {
@@ -68,8 +96,10 @@
 }
 
 @mixin wrapper($wrapper: 1440px, $px: 24) {
-	margin: 0 auto;
-	max-width: $wrapper;
-	width: 100%;
-	@include prop("padding-inline", $px);
+	& {
+		margin: 0 auto;
+		max-width: $wrapper;
+		width: 100%;
+		@include prop("padding-inline", $px);
+	}
 }
