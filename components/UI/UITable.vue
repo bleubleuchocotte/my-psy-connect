@@ -39,10 +39,15 @@ const id = useId();
 	color: var(--white);
 	background-color: rgba(255, 255, 255, 0.15);
 	border: 1px solid rgba(255, 255, 255, 0.5);
-	@include padding(40);
+	@include prop("border-radius", 10);
+
+	@include prop("padding-block", 40);
+	@include prop("padding-left", 40);
+	@include prop("padding-right", 16);
 
 	table {
 		border-collapse: collapse;
+		width: max-content;
 	}
 
 	thead {
@@ -50,17 +55,23 @@ const id = useId();
 			border-left: 1px solid rgba(255, 255, 255, 0.5);
 			border-right: 1px solid rgba(255, 255, 255, 0.5);
 		}
+		th:not(:first-of-type) {
+			@include prop("padding-inline", 24);
+		}
 	}
 
 	tbody {
 		tr {
 			td {
-				@include prop("padding-inline", 24);
 				@include prop("padding-top", 24);
 
 				&:first-of-type {
 					border-left: 1px solid rgba(255, 255, 255, 0.5);
 					border-right: 1px solid rgba(255, 255, 255, 0.5);
+				}
+
+				svg {
+					margin: 0 auto;
 				}
 			}
 		}

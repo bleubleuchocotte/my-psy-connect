@@ -1,6 +1,8 @@
 <template>
 	<div class="ui-table-item">
-		<slot name="icon" />
+		<div class="ui-table-item__icon">
+			<slot name="icon" />
+		</div>
 		<slot name="text" />
 	</div>
 </template>
@@ -13,5 +15,9 @@
 	@include prop("padding-right", 24);
 	@include prop("padding-top", 24);
 	@include gap(10);
+
+	&__icon {
+		flex-shrink: 0;
+	}
 }
 </style>
