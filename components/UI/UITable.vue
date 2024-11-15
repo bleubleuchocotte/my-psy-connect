@@ -35,9 +35,9 @@ const id = useId();
 
 <style scoped lang="scss">
 .ui-table {
-	width: fit-content;
 	color: var(--white);
 	background-color: rgba(255, 255, 255, 0.15);
+	backdrop-filter: var(--blur);
 	border: 1px solid rgba(255, 255, 255, 0.5);
 	@include prop("border-radius", 10);
 
@@ -47,7 +47,6 @@ const id = useId();
 
 	table {
 		border-collapse: collapse;
-		width: max-content;
 	}
 
 	thead {
