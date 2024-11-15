@@ -3,7 +3,9 @@
 		<div class="ui-table-item__icon">
 			<slot name="icon" />
 		</div>
-		<slot name="text" />
+		<div class="ui-table-item__text">
+			<slot name="text" />
+		</div>
 	</div>
 </template>
 
@@ -18,6 +20,10 @@
 
 	&__icon {
 		flex-shrink: 0;
+	}
+
+	&__text {
+		text-align: start;
 	}
 }
 </style>
