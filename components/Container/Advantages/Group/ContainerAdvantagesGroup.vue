@@ -20,7 +20,7 @@
 				</UIButton>
 			</template>
 		</UIContainerHeading>
-		<UIContainerContent>
+		<UIContainerContent class="container-advantages-group__content">
 			<template #content>
 				<UITable>
 					<UITableItem>
@@ -128,6 +128,7 @@
 	background-color: var(--dark-blue);
 
 	&__heading {
+		flex: 0.45;
 		align-items: flex-start;
 		text-align: left;
 
@@ -144,6 +145,10 @@
 			color: var(--white);
 			background-color: var(--green);
 		}
+	}
+
+	&__content {
+		flex: 1;
 	}
 }
 </style>
