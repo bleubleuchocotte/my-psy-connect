@@ -7,7 +7,17 @@
 
 p,
 .p {
-	@include font("fs-40-600");
+	@include font("fs-16-500");
+}
+
+h2,
+.h2 {
+	@include font("fs-45-600");
+}
+
+h3,
+.h3 {
+	@include font("fs-20-600");
 }
 
 select {
@@ -29,6 +39,8 @@ select {
 	--text: var(--dark-blue);
 	--background: var(--white);
 	--accent: var(--green);
+
+	--blur: blur(60px);
 }
 
 html {
