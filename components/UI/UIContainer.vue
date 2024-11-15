@@ -12,8 +12,7 @@ withDefaults(defineProps<ComponentProps>(), {
 
 <template>
 	<component :is="wrapper" class="ui-container" :data-direction="direction">
-		<slot name="heading" />
-		<slot name="content" />
+		<slot />
 	</component>
 </template>
 
