@@ -1,7 +1,7 @@
 <script setup lang="ts">
 type ComponentProps = {
 	wrapper?: keyof HTMLElementTagNameMap
-	direction?: "row" | "column"
+	direction?: "row" | "row-reverse" | "column"
 };
 
 withDefaults(defineProps<ComponentProps>(), {
@@ -22,7 +22,11 @@ withDefaults(defineProps<ComponentProps>(), {
 
 	&[data-direction="row"] {
 		flex-direction: row;
-		@include gap(94);
+		@include gap(142);
+	}
+	&[data-direction="row-reverse"] {
+		flex-direction: row-reverse;
+		@include gap(142);
 	}
 	&[data-direction="column"] {
 		flex-direction: column;
