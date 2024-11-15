@@ -14,7 +14,7 @@ type ButtonHTMLAttributes = {
 };
 
 type ComponentProps = {
-	variant: "default" | "small"
+	variant?: "default" | "small"
 };
 
 const props = withDefaults(defineProps<ButtonHTMLAttributes & ComponentProps>(), {
@@ -25,13 +25,13 @@ const props = withDefaults(defineProps<ButtonHTMLAttributes & ComponentProps>(),
 </script>
 
 <template>
-	<button class="button" v-bind="props" :data-variant="variant">
+	<button class="ui-button" v-bind="props" :data-variant="variant">
 		<slot />
 	</button>
 </template>
 
 <style scoped lang="scss">
-.button {
+.ui-button {
 	display: flex;
 	align-items: center;
 	border-style: solid;
