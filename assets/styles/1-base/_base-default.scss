@@ -1,48 +1,38 @@
-h1,
-.h1 {
-	@include font("title/h1");
+@font-face {
+	font-family: "Figtree";
+	src: url("/fonts/Figtree-VariableFont_wght.ttf") format("TrueType");
+	font-display: swap;
+	font-weight: 300 900;
 }
-h2,
-.h2 {
-	@include font("title/h2");
-}
-h3,
-.h3 {
-	@include font("title/h3");
-}
-h4,
-.h4 {
-	@include font("title/h4");
-}
+
 p,
 .p {
-	@include font("text/p");
+	@include font("fs-40-600");
 }
 
 select {
 	color: currentColor; // Reset blue color from -apple-system-blue ios 15
 }
 
-@media (prefers-color-scheme: light) {
-	:root {
-		--text: #121313;
-		--background: #f8f9fa;
-		--primary: #678caf;
-		--secondary: #a3c0dc;
-		--accent: #69a2d7;
-	}
-}
-@media (prefers-color-scheme: dark) {
-	:root {
-		--text: #edeeee;
-		--background: #040506;
-		--primary: #4f7496;
-		--secondary: #23415c;
-		--accent: #286095;
-	}
+:root {
+	--black: #000000;
+	--dark-blue: #0c1b33;
+	--green: #4b9765;
+	--light-green: #aad5b8;
+	--extra-light-green: #ddeee2;
+	--beige: #f1f0e9;
+	--white: #ffffff;
+	--light-grey: #eaeaea;
+	--medium-grey: #b6b6b6;
+	--dark-grey: #959595;
+
+	--text: var(--dark-blue);
+	--background: var(--white);
+	--accent: var(--green);
 }
 
 html {
+	font-family: "Figtree", Arial, Helvetica, sans-serif;
 	accent-color: var(--accent);
 }
 
