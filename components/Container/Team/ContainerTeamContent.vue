@@ -87,6 +87,7 @@
 		max-width: unset;
 
 		position: absolute;
+		z-index: -1;
 		top: -25%;
 	}
 
