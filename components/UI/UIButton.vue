@@ -13,40 +13,54 @@ type ButtonHTMLAttributes = {
 	value?: string | ReadonlyArray<string> | number
 };
 
-const props = withDefaults(defineProps<ButtonHTMLAttributes>(), {
+type ComponentProps = {
+	variant: "default" | "small"
+};
+
+const props = withDefaults(defineProps<ButtonHTMLAttributes & ComponentProps>(), {
 	type: "button",
 	disabled: false,
+	variant: "default",
 });
 </script>
 
 <template>
-	<button class="button" v-bind="props">
+	<button class="button" v-bind="props" :data-variant="variant">
 		<slot />
 	</button>
 </template>
 
 <style scoped lang="scss">
 .button {
-	background-color: var(--text);
-	color: var(--background);
+	display: flex;
+	align-items: center;
+	border-style: solid;
+	border-width: 2px;
+	border-color: transparent;
 
-	border: 1px solid;
+	@include gap(10);
+	@include prop("border-radius", 50);
+	@include prop("padding-block", 15);
 
-	@include prop("padding-block", 2);
-	@include prop("padding-inline", 4);
+	&[data-variant="default"] {
+		@include prop("padding-inline", 25);
+	}
+	&[data-variant="small"] {
+		@include prop("padding-inline", 10);
+	}
+
+	@include font("fs-16-600");
 
 	&:not([disabled]) {
 		cursor: pointer;
 
 		&:hover {
-			background-color: var(--primary);
 		}
 
 		// focus-visible let the UA determines when it need to apply focus style
 		&:focus,
 		&:focus-within,
 		&:focus-visible {
-			outline: 1px solid var(--text);
 		}
 	}
 }
