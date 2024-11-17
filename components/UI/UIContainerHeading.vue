@@ -11,6 +11,8 @@
 
 <style scoped lang="scss">
 .ui-container-heading {
+	align-self: center;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -18,6 +20,9 @@
 	text-align: center;
 
 	@include gap(40);
+
+	max-width: 60ch;
+	text-wrap: balance;
 
 	&__content {
 		display: flex;
