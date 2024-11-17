@@ -10,7 +10,7 @@
 	background-color: var(--dark-blue);
 
 	&__heading {
-		flex: 0.45;
+		flex: 0.5;
 		align-items: flex-start;
 		text-align: left;
 	}
