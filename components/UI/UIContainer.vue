@@ -19,6 +19,7 @@ withDefaults(defineProps<ComponentProps>(), {
 <style scoped lang="scss">
 .ui-container {
 	display: flex;
+	flex-wrap: wrap;
 
 	&[data-direction="row"] {
 		flex-direction: row;
