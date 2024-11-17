@@ -1,13 +1,6 @@
 <template>
 	<UIContainer class="container-solution">
-		<UIContainerHeading>
-			<template #icon>
-				<IconChat />
-			</template>
-			<template #title>
-				<h2>Votre solution sécurisée, sur mesure, avec des aides à portée de main</h2>
-			</template>
-		</UIContainerHeading>
+		<ContainerSolutionHeading />
 
 		<UIContainerContent>
 			<template #content>
