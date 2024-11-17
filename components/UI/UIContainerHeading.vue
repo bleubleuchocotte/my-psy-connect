@@ -19,10 +19,10 @@
 	justify-content: center;
 	text-align: center;
 
-	@include gap(40);
-
 	max-width: 60ch;
 	text-wrap: balance;
+
+	@include gap(40);
 
 	&__content {
 		display: flex;
