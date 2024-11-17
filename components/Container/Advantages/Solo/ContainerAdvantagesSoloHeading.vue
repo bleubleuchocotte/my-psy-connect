@@ -4,7 +4,7 @@
 			<IconChat class="container-advantages-solo-heading__icon" />
 		</template>
 		<template #title>
-			<h2 class="container-advantages-solo-heading__title">
+			<h2>
 				Avantages des séances individuelles MyPsy
 			</h2>
 		</template>
@@ -30,8 +30,8 @@
 		align-self: flex-start;
 	}
 
-	&__title {
-		color: var(--black);
+	&__text {
+		@include font("fs-14-500");
 	}
 
 	&__cta {

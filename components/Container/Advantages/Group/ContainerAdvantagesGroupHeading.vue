@@ -32,6 +32,10 @@
 		color: var(--white);
 	}
 
+	&__text {
+		@include font("fs-14-500");
+	}
+
 	&__cta {
 		color: var(--white);
 		background-color: var(--green);

@@ -9,7 +9,7 @@
 			</h2>
 		</template>
 		<template #text>
-			<p>
+			<p class="container-legal-heading__text">
 				Chez MyPsy, nous réunissons des experts pour vous offrir un accompagnement personnalisé et de qualité, adapté à vos besoins.<br>Notre équipe vous assure un soutien professionnel en psychanalyse, psychothérapie et psychopraticie, avec une approche moderne et bienveillante.
 			</p>
 		</template>
@@ -28,6 +28,10 @@
 
 	&__icon {
 		align-self: flex-start;
+	}
+
+	&__text {
+		@include font("fs-14-500");
 	}
 
 	&__cta {
