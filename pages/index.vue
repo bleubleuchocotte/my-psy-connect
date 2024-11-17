@@ -11,6 +11,7 @@ useSeoMeta({
 		<ContainerTeam />
 		<ContainerAdvantagesGroup />
 		<ContainerAdvantagesSolo />
+		<ContainerLegal />
 	</main>
 </template>
 
