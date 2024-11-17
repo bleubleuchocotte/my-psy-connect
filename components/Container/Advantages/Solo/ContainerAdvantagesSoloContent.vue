@@ -62,6 +62,8 @@
 	&__table {
 		color: var(--dark-blue);
 		width: 100%;
+		background-color: rgba(255, 255, 255, 0.4);
+		border: 1px solid rgba(255, 255, 255, 1);
 	}
 }
 </style>
