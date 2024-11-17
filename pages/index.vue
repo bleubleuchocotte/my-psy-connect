@@ -6,6 +6,7 @@ useSeoMeta({
 
 <template>
 	<main class="page-home">
+		<ContainerTrust />
 		<ContainerSolution />
 		<ContainerTeam />
 		<ContainerAdvantagesGroup />
