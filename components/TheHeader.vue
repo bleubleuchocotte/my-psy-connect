@@ -8,7 +8,7 @@
 
 		<UIButton class="header__cta">
 			Rejoignez-nous
-			<LucideMail />
+			<LucideMail color="var(--beige)" />
 		</UIButton>
 	</header>
 </template>
@@ -33,6 +33,11 @@
 		transform: translateX(-50%);
 
 		@include prop("top", 48);
+	}
+
+	&__cta {
+		background-color: var(--dark-blue);
+		color: var(--beige);
 	}
 }
 </style>
