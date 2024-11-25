@@ -15,19 +15,19 @@ const props = withDefaults(defineProps<NuxtLinkProps>(), {
 
 <style scoped lang="scss">
 .link {
+	@include font("fs-16-500");
+
 	&:visited,
 	&:link {
 		color: unset;
 	}
-	// // focus-visible let the UA determines when it need to apply focus style
-	&:focus,
-	&:focus-within,
-	&:focus-visible {
-		outline: 1px solid currentColor;
+
+	&:any-link {
+		text-decoration: unset;
 	}
 
-	// &:any-link {
-	// 	text-decoration: unset;
-	// }
+	&.router-link-active {
+		color: var(--green);
+	}
 }
 </style>
