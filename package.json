@@ -3,7 +3,7 @@
 	"type": "module",
 	"version": "1.0.0",
 	"private": true,
-	"packageManager": "pnpm@9.2.0",
+	"packageManager": "pnpm@9.6.0",
 	"author": "Thomas Auffroy <thomas@bleubleu.studio> (https://thomas-auffroy.dev)",
 	"engines": {
 		"node": ">=22.8.0"
@@ -24,6 +24,7 @@
 		"@vueuse/core": "11.0.3",
 		"@vueuse/nuxt": "11.0.3",
 		"nuxt": "3.13.1",
+		"nuxt-lucide-icons": "^1.0.5",
 		"nuxt-marquee": "^1.0.4",
 		"vue": "3.5.2",
 		"vue-router": "4.4.3"

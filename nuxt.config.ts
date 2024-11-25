@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
 	devtools: { enabled: false },
 
-	modules: ["@vueuse/nuxt", "@nuxtjs/sitemap", "@nuxtjs/robots", "nuxt-marquee"],
+	modules: [
+		"@vueuse/nuxt",
+		"@nuxtjs/sitemap",
+		"@nuxtjs/robots",
+		"nuxt-marquee",
+		"nuxt-lucide-icons",
+	],
 
 	css: ["@/assets/styles/reset.css", "@/assets/styles/1-base/_base-default.scss"],
 
