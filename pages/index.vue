@@ -15,6 +15,7 @@ useSeoMeta({
 		<ContainerAdvantagesSolo />
 		<ContainerLegal />
 		<ContainerAction />
+		<ContainerFaq />
 	</main>
 </template>
 

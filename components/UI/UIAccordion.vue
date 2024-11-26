@@ -38,36 +38,38 @@ function updateHeight() {
 </script>
 
 <template>
-	<div class="accordion" :style="`--accordion-height: ${height}px`">
-		<UIButton
-			:id="id.header"
-			type="button"
-			:aria-expanded="isOpen ? 'true' : 'false'"
-			:aria-controls="id.content"
-			class="accordion__button"
-			@click="toggleAccordion"
-			@focus="isButtonFocused = true"
-			@blur="isButtonFocused = false"
-		>
-			<slot name="title" :focus="isButtonFocused || isOpen" />
-		</UIButton>
-		<div
-			:id="id.content"
-			ref="target"
-			role="region"
-			:aria-labelledby="id.header"
-			:aria-hidden="isOpen ? 'false' : 'true'"
-			class="accordion__content"
-		>
-			<slot name="content" />
+	<div class="accordion">
+		<div :style="`--accordion-height: ${height}px`">
+			<UIButton
+				:id="id.header"
+				type="button"
+				:aria-expanded="isOpen ? 'true' : 'false'"
+				:aria-controls="id.content"
+				class="accordion__button"
+				@click="toggleAccordion"
+				@focus="isButtonFocused = true"
+				@blur="isButtonFocused = false"
+			>
+				<slot name="title" :focus="isButtonFocused || isOpen" />
+			</UIButton>
+			<div
+				:id="id.content"
+				ref="target"
+				role="region"
+				:aria-labelledby="id.header"
+				:aria-hidden="isOpen ? 'false' : 'true'"
+				class="accordion__content"
+			>
+				<slot name="content" />
+			</div>
 		</div>
+		<details class="accordion-no-script">
+			<summary>
+				<slot name="title" />
+			</summary>
+			<slot name="content" />
+		</details>
 	</div>
-	<details class="accordion-no-script">
-		<summary>
-			<slot name="title" />
-		</summary>
-		<slot name="content" />
-	</details>
 </template>
 
 <style scoped lang="scss">
@@ -88,11 +90,24 @@ function updateHeight() {
 		max-height: 0;
 		overflow: hidden;
 
-		@include transition();
+		transition: 0.3s ease-out max-height;
 
 		&[aria-hidden="false"] {
 			max-height: var(--accordion-height);
 		}
+	}
+
+	&__button {
+		border: unset;
+		color: var(--dark-blue);
+		border-radius: 0;
+		background-color: transparent;
+		width: 100%;
+
+		@include padding(10, !important);
+		@include prop("padding-left", 24, !important);
+
+		border-radius: 10px 10px 0 0;
 	}
 }
 </style>
