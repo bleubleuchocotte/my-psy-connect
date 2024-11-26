@@ -3,9 +3,9 @@
 		<div class="container-team-content-card__avatar">
 			<slot name="avatar" />
 		</div>
-		<div class="container-team-content-card__foo">
+		<div class="container-team-content-card__id">
 			<slot name="name" />
-			<div class="container-team-content-card__foo-job">
+			<div class="container-team-content-card__id-job">
 				<slot name="job" />
 			</div>
 		</div>
@@ -45,7 +45,7 @@
 		@include prop("width", 80);
 	}
 
-	&__foo {
+	&__id {
 		display: flex;
 		flex-direction: column;
 
@@ -53,6 +53,7 @@
 
 		&-job {
 			color: var(--green);
+			@include prop("height", 42);
 		}
 	}
 
@@ -64,6 +65,7 @@
 
 		&-link {
 			color: var(--green);
+			text-decoration: underline;
 		}
 	}
 }
