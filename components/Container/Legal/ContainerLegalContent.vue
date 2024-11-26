@@ -1,45 +1,43 @@
 <template>
 	<UIContainerContent class="container-legal-content">
 		<template #content>
-			<UITable class="container-legal-content__table">
+			<UITable class="container-legal-content__table" variant="darker">
 				<UITableItem>
 					<template #icon>
-						<IconHandHeart />
+						<LucideHeadset color="var(--green)" />
 					</template>
 					<template #text>
-						<p>Bénéficiez d'une assistance en cas de harcèlement, pressions abusives, discrimination ou non-respect de l'état de santé</p>
+						<p>
+							Bénéficier d'une assistance en cas de harcèlement, pressions abusives, discrimination ou non-respect de l'état de santé
+						</p>
 					</template>
 				</UITableItem>
 				<UITableItem>
 					<template #icon>
-						<IconSun />
+						<LucideFileLock2 color="var(--green)" />
 					</template>
 					<template #text>
-						<p>Accédez à un espace sécurisé garantissant la confidentialité et le respect du RGPD</p>
+						<p>
+							Accéder à un espace sécurisé garantissant la confidentialité et le respect du RGPD
+						</p>
 					</template>
 				</UITableItem>
 				<UITableItem>
 					<template #icon>
-						<IconPig />
+						<LucideMessageSquare color="var(--green)" />
 					</template>
 					<template #text>
-						<p>Partagez vos expériences en toute sécurité, soutenu par des experts en droit du travail</p>
+						<p>
+							Partager ses expériences en toute sécurité, soutenu par des experts en droit du travail
+						</p>
 					</template>
 				</UITableItem>
 				<UITableItem>
 					<template #icon>
-						<IconGrow />
+						<LucideScale color="var(--green)" />
 					</template>
 					<template #text>
-						<p>Faites valoir vos droits dans un cadre légal rigoureux</p>
-					</template>
-				</UITableItem>
-				<UITableItem>
-					<template #icon>
-						<IconSpeech />
-					</template>
-					<template #text>
-						<p>Retrouver une sérénité au travail grâce à un soutien discret et professionnel</p>
+						<p>Faire valoir ses droits dans un cadre légal rigoureux </p>
 					</template>
 				</UITableItem>
 			</UITable>

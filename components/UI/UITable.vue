@@ -1,4 +1,10 @@
 <script setup lang="ts">
+type ComponentProps = {
+	variant?: "default" | "darker"
+};
+withDefaults(defineProps<ComponentProps>(), {
+	variant: "default",
+});
 const id = useId();
 </script>
 
@@ -25,8 +31,8 @@ const id = useId();
 					<th>
 						<component :is="item" />
 					</th>
-					<td><IconClose /></td>
-					<td><IconTick /></td>
+					<td><LucideX :color="variant === 'default' ? 'var(--white)' : 'var(--dark-blue)'" opacity="50%" /></td>
+					<td><LucideCheck color="var(--green)" /></td>
 				</tr>
 			</tbody>
 		</table>

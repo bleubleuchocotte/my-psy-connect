@@ -4,91 +4,71 @@
 			<UITable class="container-advantages-group-content__table">
 				<UITableItem>
 					<template #icon>
-						<IconHandHeart />
+						<LucideHandHeart color="var(--light-green)" />
 					</template>
 					<template #text>
-						<p>Partagez et recevez du soutien collectif</p>
+						<p>Partager et recevoir du soutien collectif</p>
 					</template>
 				</UITableItem>
 				<UITableItem>
 					<template #icon>
-						<IconSun />
+						<LucideSun color="var(--light-green)" />
 					</template>
 					<template #text>
-						<p>Réduisez votre stress et gérez le burn-out</p>
+						<p>Réduire le stress et gérer le burn-out</p>
 					</template>
 				</UITableItem>
 				<UITableItem>
 					<template #icon>
-						<IconPig />
+						<LucidePiggyBank color="var(--light-green)" />
 					</template>
 					<template #text>
-						<p>Accédez à un soutien abordable</p>
+						<p>Accéder à un soutien abordable</p>
 					</template>
 				</UITableItem>
 				<UITableItem>
 					<template #icon>
-						<IconGrow />
+						<LucideTrendingUp color="var(--light-green)" />
 					</template>
 					<template #text>
-						<p>
-							Bénéficiez d'engagement et de motivation collective
-						</p>
+						<p>Bénéficiez d'engagement et de motivation collective </p>
 					</template>
 				</UITableItem>
 				<UITableItem>
 					<template #icon>
-						<IconSpeech />
+						<LucideSpeech color="var(--light-green)" />
 					</template>
 					<template #text>
-						<p>
-							Validez et normalisez votre expérience
-						</p>
+						<p>Valider et normaliser son expérience</p>
 					</template>
 				</UITableItem>
 				<UITableItem>
 					<template #icon>
-						<IconShapes />
+						<LucideTvMinimalPlay color="var(--light-green)" />
 					</template>
 					<template #text>
-						<p>
-							Rejoignez des groupes flexibles et accessibles
-						</p>
+						<p>Profiter d'une expérience interactive et sécurisante</p>
 					</template>
 				</UITableItem>
 				<UITableItem>
 					<template #icon>
-						<IconTV />
+						<LucideHeartHandshake color="var(--light-green)" />
 					</template>
 					<template #text>
-						<p>
-							Profitez d'une expérience interactive et sécurisante
-						</p>
+						<p>Renforcer le sentiment de solidarité et de sens</p>
 					</template>
 				</UITableItem>
 				<UITableItem>
 					<template #icon>
-						<IconHandHeart />
+						<LucidePercent color="var(--light-green)" />
 					</template>
 					<template #text>
-						<p>
-							Renforcez votre sentiment de solidarité et de sens
-						</p>
+						<p>Bénéficier d'un soutien moins cher mais plus efficace</p>
 					</template>
 				</UITableItem>
 				<UITableItem>
 					<template #icon>
-						<IconPercent />
-					</template>
-					<template #text>
-						<p>
-							Bénéficiez d'un soutien moins cher mais plus efficace.
-						</p>
-					</template>
-				</UITableItem>
-				<UITableItem>
-					<template #icon>
-						<IconFlower />
+						<LucideFlower color="var(--light-green)" />
 					</template>
 					<template #text>
 						<p>

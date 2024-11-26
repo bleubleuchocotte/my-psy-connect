@@ -10,7 +10,7 @@
 	background-color: var(--extra-light-green);
 
 	&__heading {
-		flex: 0.6;
+		flex: 0.5;
 	}
 	&__content {
 		flex: 1;

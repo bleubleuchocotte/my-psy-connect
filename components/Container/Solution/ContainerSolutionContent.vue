@@ -2,7 +2,7 @@
 	<div class="container-solution-content">
 		<UIContainerContentCard>
 			<template #icon>
-				<IconLaugh />
+				<IconLaugh color="var(--green)" />
 			</template>
 			<template #title>
 				<h3>
@@ -17,37 +17,37 @@
 		</UIContainerContentCard>
 		<UIContainerContentCard>
 			<template #icon>
-				<IconLaugh />
+				<LucideLock color="var(--green)" />
 			</template>
 			<template #title>
 				<h3>
-					Accompagnement personnalisé
+					Sécurité des données
 				</h3>
 			</template>
 			<template #text>
 				<p>
-					Nous vous accompagnons à chaque étape de votre parcours de soins.<br>Nos psychologues sont là pour vous écouter, vous guider, et vous aider à retrouver un équilibre. Chaque session est adaptée à vos besoins spécifiques.
+					La confidentialité de vos informations est notre priorité. Toutes vos données personnelles sont protégées par des protocoles de sécurité avancés, respectant les normes RGPD.
 				</p>
 			</template>
 		</UIContainerContentCard>
 		<UIContainerContentCard>
 			<template #icon>
-				<IconLaugh />
+				<LucideIdCard color="var(--green)" />
 			</template>
 			<template #title>
 				<h3>
-					Accompagnement personnalisé
+					Qualité des praticiens
 				</h3>
 			</template>
 			<template #text>
 				<p>
-					Nous vous accompagnons à chaque étape de votre parcours de soins.<br>Nos psychologues sont là pour vous écouter, vous guider, et vous aider à retrouver un équilibre. Chaque session est adaptée à vos besoins spécifiques.
+					Nos praticiens sont tous des professionnels certifiés, sélectionnés avec soin pour leur expertise et leur engagement. Découvrez leurs profils détaillés et choisissez celui qui vous correspond le mieux.
 				</p>
 			</template>
 		</UIContainerContentCard>
 		<UIContainerContentCard>
 			<template #icon>
-				<IconLaugh />
+				<LucideCross color="var(--green)" />
 			</template>
 			<template #title>
 				<h3>
@@ -62,16 +62,16 @@
 		</UIContainerContentCard>
 		<UIContainerContentCard>
 			<template #icon>
-				<IconLaugh />
+				<LucideHandCoins color="var(--green)" />
 			</template>
 			<template #title>
 				<h3>
-					Mutuelles et complémentaires santé
+					Initiatives d'entreprises
 				</h3>
 			</template>
 			<template #text>
 				<p>
-					les psychologues conventionnés seront en général facilement remboursés par une mutuelle.<br>Les séances avec un psychothérapeute ou un psychanalyste peuvent aussi être remboursées par certaines mutuelles, souvent dans le cadre de packs dédiés aux "médecines douces" ou "thérapies alternatives".
+					Certaines entreprises offrent des chèques santé ou des aides financières pour les consultations psychologiques, souvent discrètement dans le cadre de programmes de bien-être au travail.<br>Ces aides sont accessibles sans que les supérieurs hiérarchiques en soient informés, offrant une solution confidentielle pour les employés.
 				</p>
 			</template>
 		</UIContainerContentCard>
@@ -85,6 +85,10 @@
 
 	@include gap(24);
 	@include prop("padding-inline", 60);
+
+	p {
+		@include font("fs-14-500");
+	}
 
 	& > div {
 		flex: 1;

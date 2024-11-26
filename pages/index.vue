@@ -7,6 +7,7 @@ useSeoMeta({
 <template>
 	<main class="page-home">
 		<ContainerHero />
+		<PageHomePostHeroSection />
 		<ContainerTrust />
 		<ContainerSolution />
 		<ContainerTeam />
@@ -14,6 +15,7 @@ useSeoMeta({
 		<ContainerAdvantagesSolo />
 		<ContainerLegal />
 		<ContainerAction />
+		<ContainerFaq />
 	</main>
 </template>
 

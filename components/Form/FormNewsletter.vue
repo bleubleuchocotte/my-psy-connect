@@ -43,9 +43,10 @@ const onSubmit: (_: Event) => void = (e: Event) => {
 	}
 
 	&[data-variant="footer"] {
+		box-shadow: var(--box-shadow);
+		@include padding(5);
+
 		.form-newsletter {
-			filter: var(--drop-shadow);
-			@include padding(5);
 			&__submit {
 				background-color: var(--dark-blue);
 			}

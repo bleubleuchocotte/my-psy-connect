@@ -1,7 +1,7 @@
 <template>
 	<UIContainerHeading>
 		<template #title>
-			<h1 class="container-hero-heading__title">
+			<h1 class="container-hero-heading__title big">
 				<span>Votre bien-être <IconTextGreenCircleHuman /></span>
 				<span><PageHomeHeroIconReveal /> au travail,</span>
 				<span>notre priorité</span>

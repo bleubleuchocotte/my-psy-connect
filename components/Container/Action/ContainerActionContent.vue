@@ -9,76 +9,76 @@
 
 				<UIContainerContentCard :blur="true">
 					<template #icon>
-						<IconLaugh />
+						<LucideSpeech color="var(--green)" />
 					</template>
 					<template #title>
 						<h3>
-							Accompagnement personnalisé
+							Renforcement de la confiance en soi
 						</h3>
 					</template>
 					<template #text>
 						<p>
-							Nous vous accompagnons à chaque étape de votre parcours de soins.<br>Nos psychologues sont là pour vous écouter, vous guider, et vous aider à retrouver un équilibre. Chaque session est adaptée à vos besoins spécifiques.
+							Transformez vos peurs en force. Grâce aux échanges en groupe, développez votre capacité à vous exprimer librement et à oser prendre la parole, même en public, dans un environnement sécurisant.
 						</p>
 					</template>
 				</UIContainerContentCard>
 				<UIContainerContentCard :blur="true">
 					<template #icon>
-						<IconLaugh />
+						<LucideHand color="var(--green)" />
 					</template>
 					<template #title>
 						<h3>
-							Accompagnement personnalisé
+							S'affranchir de la crainte de l'engagement
 						</h3>
 					</template>
 					<template #text>
 						<p>
-							Nous vous accompagnons à chaque étape de votre parcours de soins.<br>Nos psychologues sont là pour vous écouter, vous guider, et vous aider à retrouver un équilibre. Chaque session est adaptée à vos besoins spécifiques.
+							Apprenez à dépasser votre peur de l'engagement, qu'il s'agisse d'une relation, d'un projet ou d'une étape de vie.<br>Rejoignez un groupe où vous pourrez partager vos appréhensions et découvrir des stratégies pour aller de l'avant.
 						</p>
 					</template>
 				</UIContainerContentCard>
 				<UIContainerContentCard :blur="true">
 					<template #icon>
-						<IconLaugh />
+						<LucideFileLock2 color="var(--green)" />
 					</template>
 					<template #title>
 						<h3>
-							Accompagnement personnalisé
+							Anonymat garanti et confidentialité
 						</h3>
 					</template>
 					<template #text>
 						<p>
-							Nous vous accompagnons à chaque étape de votre parcours de soins.<br>Nos psychologues sont là pour vous écouter, vous guider, et vous aider à retrouver un équilibre. Chaque session est adaptée à vos besoins spécifiques.
+							Tous nos groupes respectent strictement la confidentialité et l'anonymat, pour que vous puissiez vous exprimer sans retenue.<br>Ce cadre sécurisé favorise une ouverture authentique et libératrice.
 						</p>
 					</template>
 				</UIContainerContentCard>
 				<UIContainerContentCard :blur="true">
 					<template #icon>
-						<IconLaugh />
+						<LucideMessageSquare color="var(--green)" />
 					</template>
 					<template #title>
 						<h3>
-							Mutuelles et complémentaires santé
+							Dépasser le sentiment d'isolement
 						</h3>
 					</template>
 					<template #text>
 						<p>
-							les psychologues conventionnés seront en général facilement remboursés par une mutuelle.<br>Les séances avec un psychothérapeute ou un psychanalyste peuvent aussi être remboursées par certaines mutuelles, souvent dans le cadre de packs dédiés aux "médecines douces" ou "thérapies alternatives".
+							Sentir que l'on n'est pas seul face à ses difficultés est essentiel. Nos groupes vous permettront de rencontrer des personnes qui partagent vos préoccupations, pour un soutien mutuel et des échanges constructifs.
 						</p>
 					</template>
 				</UIContainerContentCard>
 				<UIContainerContentCard :blur="true">
 					<template #icon>
-						<IconLaugh />
+						<LucidePersonStanding color="var(--green)" />
 					</template>
 					<template #title>
 						<h3>
-							Mutuelles et complémentaires santé
+							Retrouver un équilibre émotionnel
 						</h3>
 					</template>
 					<template #text>
 						<p>
-							les psychologues conventionnés seront en général facilement remboursés par une mutuelle.<br>Les séances avec un psychothérapeute ou un psychanalyste peuvent aussi être remboursées par certaines mutuelles, souvent dans le cadre de packs dédiés aux "médecines douces" ou "thérapies alternatives".
+							Apprenez à gérer le stress, l’anxiété, et les émotions difficiles à travers des exercices concrets et des échanges encadrés, afin de retrouver une sérénité durable.
 						</p>
 					</template>
 				</UIContainerContentCard>
@@ -100,6 +100,11 @@
 	& > div {
 		flex: 1;
 		@include prop("min-width", 315);
+	}
+
+	p {
+		text-wrap: balance;
+		@include font("fs-14-500");
 	}
 
 	&__background {

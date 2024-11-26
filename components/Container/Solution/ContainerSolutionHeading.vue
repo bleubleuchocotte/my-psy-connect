@@ -4,7 +4,7 @@
 			<IconChat />
 		</template>
 		<template #title>
-			<h2>
+			<h2 class="h1">
 				Votre solution sécurisée, sur mesure, avec des aides à portée de main
 			</h2>
 		</template>
