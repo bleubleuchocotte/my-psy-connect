@@ -104,10 +104,10 @@ function updateHeight() {
 		background-color: transparent;
 		width: 100%;
 
+		border-radius: 10px 10px 0 0;
+
 		@include padding(10, !important);
 		@include prop("padding-left", 24, !important);
-
-		border-radius: 10px 10px 0 0;
 	}
 }
 </style>
