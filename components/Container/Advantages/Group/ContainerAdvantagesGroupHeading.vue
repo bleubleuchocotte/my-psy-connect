@@ -15,7 +15,7 @@
 		</template>
 		<template #cta>
 			<UIButton class="container-advantages-group-heading__cta">
-				En savoir plus <IconArrowTopLeft />
+				En savoir plus <LucideArrowUpRight />
 			</UIButton>
 		</template>
 	</UIContainerHeading>
