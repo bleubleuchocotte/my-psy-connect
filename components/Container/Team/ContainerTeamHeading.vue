@@ -4,7 +4,7 @@
 			<IconChat />
 		</template>
 		<template #title>
-			<h2>
+			<h2 class="h1">
 				Notre équipe<br>de professionnels
 			</h2>
 		</template>

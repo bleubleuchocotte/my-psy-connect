@@ -5,7 +5,7 @@
 		</template>
 		<template #title>
 			<h2 class="container-advantages-group-heading__title">
-				Avantages des séances de groupe MyPsy
+				Avantages des<br>séances de groupe<br>MyPsy
 			</h2>
 		</template>
 		<template #text>
@@ -29,6 +29,7 @@
 
 	&__title,
 	&__text {
+		align-self: flex-start;
 		color: var(--white);
 	}
 

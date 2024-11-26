@@ -10,7 +10,7 @@
 	background-color: var(--beige);
 
 	&__heading {
-		flex: 0.7;
+		flex: 0.5;
 	}
 	&__content {
 		flex: 1;

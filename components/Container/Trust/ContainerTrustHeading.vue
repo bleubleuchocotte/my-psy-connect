@@ -1,7 +1,9 @@
 <template>
 	<UIContainerHeading class="container-trust-heading">
 		<template #title>
-			<h2>Ils nous font confiance</h2>
+			<h2 class="h1">
+				Ils nous font confiance
+			</h2>
 		</template>
 		<template #text>
 			<p class="container-trust-heading__text">
