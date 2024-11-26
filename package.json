@@ -1,12 +1,12 @@
 {
-	"name": "bleubleu-chocotte-nuxt-boilerplate",
+	"name": "my-psy-connect",
 	"type": "module",
 	"version": "1.0.0",
 	"private": true,
 	"packageManager": "pnpm@9.6.0",
 	"author": "Thomas Auffroy <thomas@bleubleu.studio> (https://thomas-auffroy.dev)",
 	"engines": {
-		"node": ">=22.8.0"
+		"node": "22.7.0"
 	},
 	"scripts": {
 		"build": "nuxt build",
