@@ -6,6 +6,7 @@ useSeoMeta({
 
 <template>
 	<main class="page-home">
+		<ContainerHero />
 		<ContainerTrust />
 		<ContainerSolution />
 		<ContainerTeam />
@@ -22,5 +23,9 @@ useSeoMeta({
 	flex-direction: column;
 
 	@include gap(24);
+
+	&__hero {
+		background-color: var(--beige);
+	}
 }
 </style>
