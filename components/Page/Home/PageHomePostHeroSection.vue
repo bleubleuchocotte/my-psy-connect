@@ -19,7 +19,7 @@
 				<LucideHeadset />
 			</template>
 			<template #title>
-				<h2>Séances individuelles</h2>
+				<h2>Séances<br>individuelles</h2>
 			</template>
 			<template #content>
 				<p>
@@ -32,7 +32,7 @@
 				<LucideScale />
 			</template>
 			<template #title>
-				<h2>Assistance juridique</h2>
+				<h2>Assistance<br>juridique</h2>
 			</template>
 			<template #content>
 				<p>
