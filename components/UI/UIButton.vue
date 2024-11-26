@@ -38,6 +38,9 @@ const props = withDefaults(defineProps<ButtonHTMLAttributes & ComponentProps>(),
 	border-width: 2px;
 	border-color: transparent;
 
+	@include font("fs-16-600");
+	@include prop("max-height", 54);
+
 	@include gap(10);
 	@include prop("border-radius", 50);
 	@include prop("padding-block", 15);
@@ -48,8 +51,6 @@ const props = withDefaults(defineProps<ButtonHTMLAttributes & ComponentProps>(),
 	&[data-variant="small"] {
 		@include prop("padding-inline", 10);
 	}
-
-	@include font("fs-16-600");
 
 	&:not([disabled]) {
 		cursor: pointer;
