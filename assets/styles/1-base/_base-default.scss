@@ -10,6 +10,11 @@ p,
 	@include font("fs-16-500");
 }
 
+h1,
+.h1 {
+	@include font("fs-80-600");
+}
+
 h2,
 .h2 {
 	@include font("fs-45-600");
@@ -41,6 +46,7 @@ select {
 	--accent: var(--green);
 
 	--blur: blur(60px);
+	--drop-shadow: drop-shadow(0, 4px, 20px, 0, rgba(12, 27, 51, 0.08));
 }
 
 html {
