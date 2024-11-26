@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { y } = useWindowScroll();
+</script>
+
 <template>
 	<header class="header">
 		<div class="header__absolute">
@@ -9,7 +13,7 @@
 			</UIButton>
 		</div>
 
-		<div class="header__navigation">
+		<div class="header__navigation" :data-scroll="y > 10">
 			<TheNavigationBar />
 		</div>
 	</header>
@@ -44,7 +48,16 @@
 		left: 50%;
 		transform: translateX(-50%);
 
-		@include prop("top", 48);
+		transition: top 0.4s ease-out;
+
+		&[data-scroll="true"] {
+			--top: 24;
+		}
+		&[data-scroll="false"] {
+			--top: 48;
+		}
+
+		@include prop("top", var(--top));
 	}
 }
 </style>
