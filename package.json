@@ -19,7 +19,7 @@
 		"typecheck": "nuxi typecheck"
 	},
 	"dependencies": {
-		"@nuxtjs/robots": "4.1.6",
+		"@nuxtjs/robots": "5.0.0",
 		"@nuxtjs/sitemap": "6.0.1",
 		"@vueuse/core": "11.0.3",
 		"@vueuse/nuxt": "11.0.3",
