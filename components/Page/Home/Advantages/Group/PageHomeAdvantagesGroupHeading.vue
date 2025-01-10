@@ -5,7 +5,7 @@ import { LucideArrowUpRight } from "lucide-vue-next";
 <template>
 	<UIContainerHeading class="page-home-advantages-heading">
 		<template #icon>
-			<IconCustomGroupBig class="page-home-advantages-heading__icon" />
+			<IconCustomGroup class="page-home-advantages-heading__icon" />
 		</template>
 		<template #title>
 			<h2 class="page-home-advantages-heading__title">
@@ -28,7 +28,16 @@ import { LucideArrowUpRight } from "lucide-vue-next";
 <style scoped lang="scss">
 .page-home-advantages-heading {
 	&__icon {
+		height: rem(80);
+		width: rem(80);
+
+		color: var(--green);
 		align-self: flex-start;
+
+		@media not #{$desktop} {
+			height: rem(60);
+			width: rem(60);
+		}
 	}
 
 	&__title,

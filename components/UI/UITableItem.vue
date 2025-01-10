@@ -1,6 +1,12 @@
 <template>
 	<div class="ui-table-item">
-		<slot />
+		<div class="ui-table-item__icon">
+			<slot name="icon" />
+		</div>
+
+		<p>
+			<slot name="text" />
+		</p>
 	</div>
 </template>
 
@@ -9,5 +15,9 @@
 	display: flex;
 	align-items: center;
 	gap: rem(10);
+
+	&__icon {
+		flex-shrink: 0;
+	}
 }
 </style>

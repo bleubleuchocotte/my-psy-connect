@@ -5,44 +5,84 @@ import { LucideBadgePercent, LucideFlower, LucideHandHeart, LucideHeartHandshake
 <template>
 	<UITable class="page-home-advantages-group-content">
 		<UITableItem>
-			<LucideHandHeart stroke="var(--light-green)" stroke-width="2" />
-			<p>Partager et recevoir du soutien collectif</p>
+			<template #icon>
+				<LucideHandHeart stroke="var(--light-green)" stroke-width="2" />
+			</template>
+			<template #text>
+				Partager et recevoir du soutien collectif
+			</template>
 		</UITableItem>
 		<UITableItem>
-			<LucideSun stroke="var(--light-green)" stroke-width="2" />
-			<p>Réduire le stress et gérer le burn-out</p>
+			<template #icon>
+				<LucideSun stroke="var(--light-green)" stroke-width="2" />
+			</template>
+			<template #text>
+				Réduire le stress et gérer le burn-out
+			</template>
 		</UITableItem>
 		<UITableItem>
-			<LucidePiggyBank stroke="var(--light-green)" stroke-width="2" />
-			<p>Accéder à un soutien abordable</p>
+			<template #icon>
+				<LucidePiggyBank stroke="var(--light-green)" stroke-width="2" />
+			</template>
+			<template #text>
+				Accéder à un soutien abordable
+			</template>
 		</UITableItem>
 		<UITableItem>
-			<LucideTrendingUp stroke="var(--light-green)" stroke-width="2" />
-			<p>Bénéficier d'engagement et de motivation collective</p>
+			<template #icon>
+				<LucideTrendingUp stroke="var(--light-green)" stroke-width="2" />
+			</template>
+			<template #text>
+				Bénéficier d'engagement et de motivation collective
+			</template>
 		</UITableItem>
 		<UITableItem>
-			<LucideSpeech stroke="var(--light-green)" stroke-width="2" />
-			<p>Valider et normaliser son expérience</p>
+			<template #icon>
+				<LucideSpeech stroke="var(--light-green)" stroke-width="2" />
+			</template>
+			<template #text>
+				Valider et normaliser son expérience
+			</template>
 		</UITableItem>
 		<UITableItem>
-			<LucideShapes stroke="var(--light-green)" stroke-width="2" />
-			<p>Rejoindre des groupes fexibles et accessibles</p>
+			<template #icon>
+				<LucideShapes stroke="var(--light-green)" stroke-width="2" />
+			</template>
+			<template #text>
+				Rejoindre des groupes fexibles et accessibles
+			</template>
 		</UITableItem>
 		<UITableItem>
-			<LucideMonitorPlay stroke="var(--light-green)" stroke-width="2" />
-			<p>Profiter d'une expérience interactive et sécurisante</p>
+			<template #icon>
+				<LucideMonitorPlay stroke="var(--light-green)" stroke-width="2" />
+			</template>
+			<template #text>
+				Profiter d'une expérience interactive et sécurisante
+			</template>
 		</UITableItem>
 		<UITableItem>
-			<LucideHeartHandshake stroke="var(--light-green)" stroke-width="2" />
-			<p>Renforcer le sentiment de solidarité et de sens</p>
+			<template #icon>
+				<LucideHeartHandshake stroke="var(--light-green)" stroke-width="2" />
+			</template>
+			<template #text>
+				Renforcer le sentiment de solidarité et de sens
+			</template>
 		</UITableItem>
 		<UITableItem>
-			<LucideBadgePercent stroke="var(--light-green)" stroke-width="2" />
-			<p>Bénéficier d'un soutien moins cher mais plus efficace</p>
+			<template #icon>
+				<LucideBadgePercent stroke="var(--light-green)" stroke-width="2" />
+			</template>
+			<template #text>
+				Bénéficier d'un soutien moins cher mais plus efficace
+			</template>
 		</UITableItem>
 		<UITableItem>
-			<LucideFlower stroke="var(--light-green)" stroke-width="2" />
-			<p>Lutter contre l'isolement</p>
+			<template #icon>
+				<LucideFlower stroke="var(--light-green)" stroke-width="2" />
+			</template>
+			<template #text>
+				Lutter contre l'isolement
+			</template>
 		</UITableItem>
 	</UITable>
 </template>
