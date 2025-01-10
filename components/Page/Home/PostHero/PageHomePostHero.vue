@@ -1,13 +1,13 @@
 <template>
-	<UIContainer class="page-home-section-post-hero">
+	<UIContainer class="page-home-post-hero">
 		<UIBackgroundFixedSVG path="type-1" hide="mobile" />
-		<PageHomeSectionPostHeroHeading />
-		<PageHomeSectionPostHeroContent />
+		<PageHomePostHeroHeading />
+		<PageHomePostHeroContent />
 	</UIContainer>
 </template>
 
 <style scoped lang="scss">
-.page-home-section-post-hero {
+.page-home-post-hero {
 	@media #{$desktop} {
 		gap: rem(90) !important;
 	}

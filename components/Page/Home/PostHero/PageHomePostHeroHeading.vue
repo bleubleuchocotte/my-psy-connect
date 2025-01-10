@@ -1,5 +1,5 @@
 <template>
-	<UIContainerHeading class="page-home-section-hero-heading">
+	<UIContainerHeading class="page-home-hero-heading">
 		<template #icon>
 			<IconCustomCloud />
 		</template>
@@ -12,7 +12,7 @@
 </template>
 
 <style scoped lang="scss">
-.page-home-section-hero-heading {
+.page-home-hero-heading {
 	max-width: none;
 }
 </style>

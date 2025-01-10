@@ -1,6 +1,6 @@
 <template>
-	<section class="page-home-section-trio-cards">
-		<PageHomeSectionTrioCardsCard background-src="/images/background/card-1.png">
+	<section class="page-home-trio-cards">
+		<PageHomeTrioCardsCard background-src="/images/background/card-1.png">
 			<template #icon>
 				<IconCustomGroup />
 			</template>
@@ -13,8 +13,8 @@
 					Chaque groupe est limité à 4 participants pour garantir un espace d'échange de qualité, où chacun peut s'exprimer librement et recevoir un soutien adapté.
 				</p>
 			</template>
-		</PageHomeSectionTrioCardsCard>
-		<PageHomeSectionTrioCardsCard background-src="/images/background/card-2.png">
+		</PageHomeTrioCardsCard>
+		<PageHomeTrioCardsCard background-src="/images/background/card-2.png">
 			<template #icon>
 				<IconCustomChatSmall />
 			</template>
@@ -26,8 +26,8 @@
 					Pour ceux qui préfèrent un accompagnement plus personnalisé, MyPsy propose également des séances individuelles avec des psychologues qualifiés. Ces séances vous offrent un espace dédié où vous pouvez aborder vos préoccupations en toute confidentialité, à votre rythme.
 				</p>
 			</template>
-		</PageHomeSectionTrioCardsCard>
-		<PageHomeSectionTrioCardsCard background-src="/images/background/card-3.png">
+		</PageHomeTrioCardsCard>
+		<PageHomeTrioCardsCard background-src="/images/background/card-3.png">
 			<template #icon>
 				<IconCustomHeadset />
 			</template>
@@ -39,12 +39,12 @@
 					Participez à nos webinaires animés par des psychologues  spécialisés pour comprendre le burnout, vos droits et les solutions adaptées à votre situation. Une opportunité pour poser vos questions et obtenir des réponses claires.
 				</p>
 			</template>
-		</PageHomeSectionTrioCardsCard>
+		</PageHomeTrioCardsCard>
 	</section>
 </template>
 
 <style scoped lang="scss">
-.page-home-section-trio-cards {
+.page-home-trio-cards {
 	display: flex;
 	@include gap(24);
 

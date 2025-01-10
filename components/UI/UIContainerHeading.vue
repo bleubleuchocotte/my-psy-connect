@@ -19,7 +19,6 @@
 	justify-content: center;
 	text-align: center;
 
-	max-width: 60ch;
 	text-wrap: balance;
 
 	@include gap(40);

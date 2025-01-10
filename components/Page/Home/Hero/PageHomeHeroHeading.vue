@@ -1,5 +1,5 @@
 <template>
-	<UIContainerHeading class="page-home-section-hero-heading">
+	<UIContainerHeading class="page-home-hero-heading">
 		<template #title>
 			<h1 class="big">
 				Votre bien-être au travail,<br>
@@ -17,7 +17,7 @@
 </template>
 
 <style scoped lang="scss">
-.page-home-section-hero-heading {
+.page-home-hero-heading {
 	max-width: none;
 
 	h2 {
