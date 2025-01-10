@@ -1,16 +1,16 @@
 <template>
 	<div class="footer-socials">
 		<UILink to="https://google.com" class="footer-socials__link">
-			<IconTikTok />
+			<IconSocialTikTok />
 		</UILink>
 		<UILink to="https://google.com" class="footer-socials__link">
-			<IconTikTok />
+			<IconSocialInstagram />
 		</UILink>
 		<UILink to="https://google.com" class="footer-socials__link">
-			<IconTikTok />
+			<IconSocialFacebook />
 		</UILink>
 		<UILink to="https://google.com" class="footer-socials__link">
-			<IconTikTok />
+			<IconSocialLinkedIn />
 		</UILink>
 	</div>
 </template>
@@ -19,6 +19,10 @@
 .footer-socials {
 	display: flex;
 	@include gap(15);
+
+	@media not #{$desktop} {
+		justify-content: center;
+	}
 
 	&__link {
 		@include padding(10);

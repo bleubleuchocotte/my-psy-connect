@@ -1,12 +1,12 @@
 <template>
 	<div class="footer-legal-links">
-		<UILink>
+		<UILink class="p">
 			Politique de Confidentialité
 		</UILink>
-		<UILink>
+		<UILink class="p">
 			Mentions légales
 		</UILink>
-		<UILink>
+		<UILink class="p">
 			Politiques des cookies
 		</UILink>
 	</div>
@@ -17,5 +17,9 @@
 	display: flex;
 	align-items: center;
 	@include gap(20);
+
+	@media not #{$desktop} {
+		flex-direction: column;
+	}
 }
 </style>
