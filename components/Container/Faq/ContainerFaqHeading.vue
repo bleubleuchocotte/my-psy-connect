@@ -1,7 +1,7 @@
 <template>
 	<UIContainerHeading>
 		<template #icon>
-			<IconChat />
+			<IconCustomQuestionMark />
 		</template>
 		<template #title>
 			<h2 class="h1">
