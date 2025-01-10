@@ -15,7 +15,7 @@ const props = withDefaults(defineProps<NuxtLinkProps>(), {
 
 <style scoped lang="scss">
 .link {
-	@include font("fs-16-500");
+	@include font("cta");
 
 	&:visited,
 	&:link {

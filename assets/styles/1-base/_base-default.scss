@@ -8,26 +8,30 @@
 p,
 .p,
 input {
-	@include font("fs-16-500");
+	@include font("p-main");
+}
+
+.p-secondary {
+	@include font("p");
 }
 
 .big {
-	@include font("fs-80-600");
+	@include font("big");
 }
 
 h1,
 .h1 {
-	@include font("fs-45-600");
+	@include font("h1");
 }
 
 h2,
 .h2 {
-	@include font("fs-35-600");
+	@include font("h2");
 }
 
 h3,
 .h3 {
-	@include font("fs-20-600");
+	@include font("h3");
 }
 
 select {

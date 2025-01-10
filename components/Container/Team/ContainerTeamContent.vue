@@ -102,7 +102,7 @@
 		-webkit-box-orient: vertical;
 		-webkit-line-clamp: 4;
 		color: var(--fake-black);
-		@include font("fs-14-500");
+		@include font("p");
 	}
 }
 </style>

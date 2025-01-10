@@ -34,7 +34,7 @@
 	}
 
 	&__text {
-		@include font("fs-14-500");
+		@include font("p");
 	}
 
 	&__cta {

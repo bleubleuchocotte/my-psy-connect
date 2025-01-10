@@ -49,7 +49,7 @@
 	@include gap(24);
 
 	p {
-		@include font("fs-14-500");
+		@include font("p");
 	}
 }
 </style>

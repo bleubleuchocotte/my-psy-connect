@@ -104,7 +104,7 @@
 
 	p {
 		text-wrap: balance;
-		@include font("fs-14-500");
+		@include font("p");
 	}
 
 	&__background {

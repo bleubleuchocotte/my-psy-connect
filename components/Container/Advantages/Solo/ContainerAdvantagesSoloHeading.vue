@@ -36,7 +36,7 @@
 
 	&__text {
 		color: var(--fake-black);
-		@include font("fs-14-500");
+		@include font("p");
 	}
 
 	&__cta {

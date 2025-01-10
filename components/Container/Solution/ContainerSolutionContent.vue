@@ -87,7 +87,7 @@
 	@include prop("padding-inline", 60);
 
 	p {
-		@include font("fs-14-500");
+		@include font("p");
 	}
 
 	& > div {
