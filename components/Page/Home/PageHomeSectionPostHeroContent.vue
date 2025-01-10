@@ -61,7 +61,7 @@ import { LucideBrain, LucideHeartHandshake, LucideLaugh, LucideMessageSquare } f
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
-		gap: pxToRem(24);
+		gap: rem(24);
 
 		@media not #{$desktop} {
 			flex-direction: column;

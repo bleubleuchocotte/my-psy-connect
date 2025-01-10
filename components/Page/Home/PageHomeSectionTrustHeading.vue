@@ -7,7 +7,7 @@
 		</template>
 		<template #text>
 			<p class="container-trust-heading__text">
-				Chez MyPsy, nous réunissons des experts pour vous offrir un accompagnement personnalisé et de qualité, adapté à vos besoins.<br>Notre équipe vous assure un soutien professionnel en psychanalyse, psychothérapie et psychopraticie, avec une approche moderne et bienveillante.
+				Ces institutions de référence nous offrent un cadre solide pour développer avec efficacité cette plateforme de mise en relation entre professionnels et victimes de burnout.
 			</p>
 		</template>
 	</UIContainerHeading>
@@ -15,6 +15,7 @@
 
 <style scoped lang="scss">
 .container-trust-heading {
+	max-width: none;
 	&__text {
 		color: var(--fake-black);
 	}

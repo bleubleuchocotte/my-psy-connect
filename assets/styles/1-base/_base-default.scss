@@ -78,3 +78,14 @@ input {
 		outline: unset;
 	}
 }
+
+[hide="desktop"] {
+	@media #{$desktop} {
+		display: none !important;
+	}
+}
+[hide="mobile"] {
+	@media not #{$desktop} {
+		display: none !important;
+	}
+}

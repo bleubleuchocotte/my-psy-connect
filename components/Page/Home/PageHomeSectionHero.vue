@@ -7,7 +7,7 @@
 
 <style scoped lang="scss">
 .page-home-section-hero {
-	padding-top: pxToRem(200);
+	padding-top: rem(200);
 	background-color: var(--beige);
 }
 </style>

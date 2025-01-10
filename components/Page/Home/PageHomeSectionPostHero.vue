@@ -1,6 +1,6 @@
 <template>
 	<UIContainer class="page-home-section-post-hero">
-		<UIBackgroundFixedSVG path="type-1" class="page-home-section-post-hero__background" />
+		<UIBackgroundFixedSVG path="type-1" hide="mobile" />
 		<PageHomeSectionPostHeroHeading />
 		<PageHomeSectionPostHeroContent />
 	</UIContainer>
@@ -9,13 +9,7 @@
 <style scoped lang="scss">
 .page-home-section-post-hero {
 	@media #{$desktop} {
-		gap: pxToRem(90) !important;
-	}
-
-	&__background {
-		@media not #{$desktop} {
-			display: none;
-		}
+		gap: rem(90) !important;
 	}
 }
 </style>

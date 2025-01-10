@@ -40,8 +40,8 @@ defineProps<ComponentProps>();
 	@include prop("padding-top", 180);
 
 	@media not #{$desktop} {
-		padding: pxToRem(20);
-		padding-top: pxToRem(120);
+		padding: rem(20);
+		padding-top: rem(120);
 	}
 
 	&__cta {
