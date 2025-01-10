@@ -37,5 +37,10 @@ withDefaults(defineProps<ComponentProps>(), {
 	@include prop("border-radius", 10);
 	@include prop("padding-block", 94);
 	@include prop("padding-inline", 118);
+
+	@media not #{$desktop} {
+		padding-inline: rem(20);
+		padding-block: rem(80);
+	}
 }
 </style>

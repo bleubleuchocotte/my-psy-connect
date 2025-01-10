@@ -16,6 +16,12 @@ withDefaults(defineProps<ComponentProps>(), {
 
 <style scoped lang="scss">
 .ui-wrapper {
-	@include wrapper(1440px, 24);
+	--padding-inline: 24;
+
+	@media not #{$desktop} {
+		--padding-inline: 10;
+	}
+
+	@include wrapper(1440px, var(--padding-inline));
 }
 </style>

@@ -6,15 +6,16 @@ useSeoMeta({
 
 <template>
 	<main class="page-home">
-		<ContainerHero />
-		<PageHomePostHeroSection />
-		<ContainerTrust />
-		<ContainerSolution />
-		<ContainerTeam />
-		<ContainerAdvantagesGroup />
-		<ContainerAdvantagesSolo />
-		<ContainerLegal />
-		<ContainerAction />
+		<PageHomeHero />
+		<PageHomePostHero />
+		<PageHomeTrioCards />
+		<PageHomeTrust />
+		<PageHomeSolution />
+		<PageHomePsychologist />
+		<PageHomeAdvantagesGroup />
+		<PageHomeAdvantagesSolo />
+		<PageHomeAction />
+
 		<ContainerFaq />
 	</main>
 </template>

@@ -1,85 +1,22 @@
-<script setup lang="ts">
-type ComponentProps = {
-	variant?: "default" | "darker"
-};
-withDefaults(defineProps<ComponentProps>(), {
-	variant: "default",
-});
-const id = useId();
-</script>
-
 <template>
 	<div class="ui-table">
-		<table>
-			<thead>
-				<tr>
-					<th scope="col" />
-					<th scope="col">
-						<p>
-							Sans<br>MyPsy
-						</p>
-					</th>
-					<th scope="col">
-						<p>
-							Avec<br>MyPsy
-						</p>
-					</th>
-				</tr>
-			</thead>
-			<tbody v-if="$slots.default">
-				<tr v-for="(item, a) in $slots.default()" :key="`item-${a}-${id}`">
-					<th>
-						<component :is="item" />
-					</th>
-					<td><LucideX :color="variant === 'default' ? 'var(--white)' : 'var(--dark-blue)'" opacity="50%" /></td>
-					<td><LucideCheck color="var(--green)" /></td>
-				</tr>
-			</tbody>
-		</table>
+		<slot />
 	</div>
 </template>
 
 <style scoped lang="scss">
 .ui-table {
-	color: var(--white);
+	display: flex;
+	flex-direction: column;
+	gap: rem(25);
 
-	backdrop-filter: var(--blur);
+	padding: rem(40);
 
-	@include prop("border-radius", 10);
+	border-radius: 10px;
 
-	@include prop("padding-block", 40);
-	@include prop("padding-left", 40);
-	@include prop("padding-right", 16);
-
-	table {
-		border-collapse: collapse;
-	}
-
-	thead {
-		th:nth-of-type(2) {
-			border-left: 1px solid rgba(255, 255, 255, 0.5);
-			border-right: 1px solid rgba(255, 255, 255, 0.5);
-		}
-		th:not(:first-of-type) {
-			@include prop("padding-inline", 24);
-		}
-	}
-
-	tbody {
-		tr {
-			td {
-				@include prop("padding-top", 24);
-
-				&:first-of-type {
-					border-left: 1px solid rgba(255, 255, 255, 0.5);
-					border-right: 1px solid rgba(255, 255, 255, 0.5);
-				}
-
-				svg {
-					margin: 0 auto;
-				}
-			}
-		}
+	@media not #{$desktop} {
+		gap: rem(20);
+		padding-inline: rem(20);
 	}
 }
 </style>

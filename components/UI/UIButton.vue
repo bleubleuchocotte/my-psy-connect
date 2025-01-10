@@ -38,7 +38,7 @@ const props = withDefaults(defineProps<ButtonHTMLAttributes & ComponentProps>(),
 	border-width: 2px;
 	border-color: transparent;
 
-	@include font("fs-16-600");
+	@include font("cta");
 	@include prop("max-height", 54);
 
 	@include gap(10);

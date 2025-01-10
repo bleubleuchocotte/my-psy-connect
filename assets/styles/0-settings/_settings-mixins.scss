@@ -1,78 +1,77 @@
-@function pxToVw($size, $breakpoint, $coef: 0.8) {
-	@return clamp(#{$size * $coef}px, ($size / $breakpoint) * 100vw, #{$size * (2 - $coef)}px);
-}
-
-@function pxToRem($px: 16) {
+@function rem($px) {
 	@return calc(1rem * $px / 16);
 }
 
 @mixin font($font) {
-	@if ($font == "fs-14-500") {
+	@if ($font == "big") {
 		& {
-			font-size: pxToRem(14);
+			font-size: rem(80);
+			line-height: rem(86);
+			font-weight: 600;
+
+			@media not #{$desktop} {
+				font-size: rem(40);
+				line-height: rem(45);
+			}
+		}
+	} @else if ($font == "h1") {
+		& {
+			font-size: rem(45);
+			line-height: rem(48);
+			font-weight: 600;
+
+			@media not #{$desktop} {
+				font-size: rem(30);
+				line-height: normal;
+			}
+		}
+	} @else if ($font == "h2") {
+		& {
+			font-size: rem(35);
+			line-height: rem(39);
+			font-weight: 600;
+
+			@media not #{$desktop} {
+				font-size: rem(25);
+				line-height: normal;
+			}
+		}
+	} @else if ($font == "h3") {
+		& {
+			font-size: rem(20);
+			line-height: rem(21);
+			font-weight: 600;
+		}
+	} @else if ($font == "p-main") {
+		& {
+			font-size: rem(16);
+			line-height: rem(21);
+			font-weight: 500;
+		}
+	} @else if ($font == "p") {
+		& {
+			font-size: rem(14);
 			line-height: normal;
 			font-weight: 500;
 		}
-	} @else if ($font == "fs-16-500") {
+	} @else if ($font == "cta") {
 		& {
-			font-size: pxToRem(16);
-			line-height: pxToRem(21);
+			font-size: rem(16);
+			line-height: normal;
+			font-weight: 600;
+		}
+	} @else if ($font == "small") {
+		& {
+			font-size: rem(11);
+			line-height: normal;
 			font-weight: 500;
-		}
-	} @else if ($font == "fs-16-600") {
-		& {
-			font-size: pxToRem(16);
-			line-height: normal;
-			font-weight: 600;
-		}
-	} @else if ($font == "fs-20-600") {
-		& {
-			font-size: pxToRem(20);
-			line-height: pxToRem(21);
-			font-weight: 600;
-		}
-	} @else if ($font == "fs-25-600") {
-		& {
-			font-size: pxToRem(25);
-			line-height: normal;
-			font-weight: 600;
-		}
-	} @else if ($font == "fs-30-600") {
-		& {
-			font-size: pxToRem(30);
-			line-height: normal;
-			font-weight: 600;
-		}
-	} @else if ($font == "fs-35-600") {
-		& {
-			font-size: pxToRem(35);
-			line-height: pxToRem(39);
-			font-weight: 600;
-		}
-	} @else if ($font == "fs-40-600") {
-		& {
-			font-size: pxToRem(40);
-			line-height: normal;
-			font-weight: 600;
-		}
-	} @else if ($font == "fs-45-600") {
-		& {
-			font-size: pxToRem(45);
-			line-height: pxToRem(48);
-			font-weight: 600;
-		}
-	} @else if ($font == "fs-80-600") {
-		& {
-			font-size: pxToRem(80);
-			line-height: normal;
-			font-weight: 600;
 		}
 	}
 }
 
 @mixin prop($property, $px, $important: null) {
 	& {
-		#{$property}: pxToRem($px) $important;
+		#{$property}: rem($px) $important;
 	}
 }
 
@@ -85,13 +84,13 @@
 }
 
 @mixin inset($px: 0) {
-	top: pxToRem($px);
-	bottom: pxToRem($px);
-	left: pxToRem($px);
-	right: pxToRem($px);
+	top: rem($px);
+	bottom: rem($px);
+	left: rem($px);
+	right: rem($px);
 
 	@supports (inset: $px) {
-		inset: pxToRem($px);
+		inset: rem($px);
 	}
 }
 

@@ -35,7 +35,6 @@ const accordionState = computed(() => {
 .container-faq-content-item {
 	background-color: var(--beige);
 
-	@include prop("width", 920);
 	@include prop("border-radius", 10);
 
 	&__title {
@@ -49,7 +48,7 @@ const accordionState = computed(() => {
 	&__content {
 		color: var(--fake-black);
 
-		@include font("fs-14-500");
+		@include font("p");
 		@include prop("padding", 24);
 		@include prop("padding-block", 10);
 	}
