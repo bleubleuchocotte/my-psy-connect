@@ -6,18 +6,18 @@ import { LucideArrowUpRight } from "lucide-vue-next";
 	<div class="page-home-trust-content">
 		<NuxtMarquee class="page-home-trust-content__marquee" :auto-fill="true" hide="mobile">
 			<div class="page-home-trust-content__marquee-item">
-				<IconLaFrenchTech />
-				<IconAgefiph />
-				<IconChambreCommerceIndustrie />
+				<IconPartnerLaFrenchTech />
+				<IconPartnerAgefiph />
+				<IconPartnerCCI />
 			</div>
 		</NuxtMarquee>
 
 		<div class="page-home-trust-content__fake-marquee" hide="mobile" />
 
 		<div hide="desktop" class="page-home-trust-content__mobile">
-			<IconLaFrenchTech />
-			<IconAgefiph />
-			<IconChambreCommerceIndustrie />
+			<IconPartnerLaFrenchTech />
+			<IconPartnerAgefiph />
+			<IconPartnerCCI />
 		</div>
 
 		<UIButton class="page-home-trust-content__cta">

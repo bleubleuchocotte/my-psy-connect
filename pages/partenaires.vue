@@ -3,7 +3,7 @@ import { LucideHandshake, LucideSmilePlus } from "lucide-vue-next";
 </script>
 
 <template>
-	<main>
+	<main class="page-partner">
 		<PageHeader>
 			<template #title>
 				Partenaires
@@ -29,5 +29,15 @@ import { LucideHandshake, LucideSmilePlus } from "lucide-vue-next";
 				Ces institutions de référence nous offrent un cadre solide pour développer avec efficacité cette plateforme de mise en relation entre professionnels et victimes de burnout.
 			</template>
 		</PageHeader>
+
+		<PagePartnerCards />
 	</main>
 </template>
+
+<style scoped lang="scss">
+.page-partner {
+	display: flex;
+	flex-direction: column;
+	gap: rem(24);
+}
+</style>
