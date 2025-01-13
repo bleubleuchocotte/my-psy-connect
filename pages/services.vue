@@ -61,6 +61,10 @@ import { LucideHeadset } from "lucide-vue-next";
 		</UISectionTextImage>
 
 		<PageServicesWebinaires />
+
+		<PageHomeAction />
+
+		<ContainerFaq />
 	</main>
 </template>
 
