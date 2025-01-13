@@ -1,7 +1,9 @@
 <template>
 	<div class="ui-container-heading">
 		<div class="ui-container-heading__content">
-			<slot name="icon" />
+			<div class="ui-container-heading__content-icon">
+				<slot name="icon" />
+			</div>
 			<slot name="title" />
 			<slot name="text" />
 		</div>
@@ -29,6 +31,10 @@
 		align-items: center;
 
 		@include gap(24);
+
+		&-icon {
+			color: var(--green);
+		}
 	}
 }
 </style>

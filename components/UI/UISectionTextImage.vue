@@ -10,17 +10,25 @@ defineProps<ComponentProps>();
 <template>
 	<section class="ui-section-text-image" :variant :direction>
 		<div class="ui-section-text-image__start">
-			<div class="ui-section-text-image__start-icon">
-				<slot name="icon" />
+			<div class="ui-section-text-image__start-text">
+				<div v-if="$slots.icon" class="ui-section-text-image__start-icon">
+					<slot name="icon" />
+				</div>
+
+				<h2 v-if="$slots.title" class="h1">
+					<slot name="title" />
+				</h2>
+
+				<h3 v-if="$slots['sub-title']">
+					<slot name="sub-title" />
+				</h3>
+
+				<p v-if="$slots.description">
+					<slot name="description" />
+				</p>
 			</div>
 
-			<h2 class="h1">
-				<slot name="title" />
-			</h2>
-
-			<p>
-				<slot name="description" />
-			</p>
+			<slot name="cta" />
 		</div>
 
 		<div class="ui-section-text-image__end">
@@ -80,12 +88,21 @@ defineProps<ComponentProps>();
 
 		display: flex;
 		flex-direction: column;
-		gap: rem(24);
+		gap: rem(40);
 
 		@media not #{$desktop} {
-			gap: rem(20);
 			padding-inline: 0;
 			padding-block: 0;
+		}
+
+		&-text {
+			display: flex;
+			flex-direction: column;
+			gap: rem(24);
+
+			@media not #{$desktop} {
+				gap: rem(20);
+			}
 		}
 
 		&-icon {
@@ -103,6 +120,10 @@ defineProps<ComponentProps>();
 				width: 100%;
 				height: 100%;
 			}
+		}
+
+		h3 {
+			color: var(--green);
 		}
 	}
 
