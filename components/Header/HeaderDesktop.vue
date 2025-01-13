@@ -10,7 +10,9 @@ const { y } = useWindowScroll();
 			<IconLogoWithText class="header__absolute-logo" />
 
 			<UIButton class="header__absolute-cta">
-				Rejoignez-nous
+				<span>
+					Rejoignez-nous
+				</span>
 				<LucideMail stroke="var(--beige)" stroke-width="2" />
 			</UIButton>
 		</div>
@@ -23,9 +25,18 @@ const { y } = useWindowScroll();
 
 <style lang="scss" scoped>
 .header {
+	--padding-inline: 118;
+
+	@media screen and (max-width: 1400px) {
+		--padding-inline: 64;
+	}
+	@media screen and (max-width: 1200px) {
+		--padding-inline: 16;
+	}
+
 	position: relative;
 
-	@include wrapper(1440px, 118);
+	@include wrapper(1440px, var(--padding-inline));
 
 	&__absolute {
 		display: flex;
@@ -35,11 +46,17 @@ const { y } = useWindowScroll();
 		left: 0;
 		width: 100%;
 		@include prop("top", 24);
-		@include prop("padding-inline", 118);
+		@include prop("padding-inline", var(--padding-inline));
 
 		&-cta {
 			background-color: var(--dark-blue);
 			color: var(--beige);
+
+			span {
+				@media screen and (max-width: 1250px) {
+					display: none;
+				}
+			}
 		}
 	}
 
