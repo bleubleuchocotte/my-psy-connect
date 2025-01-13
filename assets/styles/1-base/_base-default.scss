@@ -94,3 +94,19 @@ a.reset-ua {
 	color: var(--text);
 	text-decoration: none;
 }
+
+a.button {
+	width: fit-content;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: rem(10);
+
+	padding-inline: rem(25);
+	height: rem(54);
+
+	border-radius: 50px;
+
+	@include font("cta");
+}
