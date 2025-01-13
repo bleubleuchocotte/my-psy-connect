@@ -10,7 +10,7 @@ import { LucideHeadset } from "lucide-vue-next";
 			</template>
 
 			<template #svg-background>
-				<IconCustomGroup />
+				<IconCustomPuzzle />
 			</template>
 
 			<template #icons>
@@ -27,7 +27,7 @@ import { LucideHeadset } from "lucide-vue-next";
 
 		<UISectionTextImage variant="dark-blue" direction="row-reverse">
 			<template #icon>
-				<IconCustomGroup />
+				<IconCustomPuzzle />
 			</template>
 			<template #title>
 				Séances de groupe MyPsy : solidarité et soutien collectif

@@ -5,7 +5,7 @@ import { LucideMail } from "lucide-vue-next";
 <template>
 	<UIContainerHeading class="page-home-action-heading">
 		<template #icon>
-			<IconCustomPath />
+			<IconCustomPath class="center" />
 		</template>
 		<template #title>
 			<h2 class="h1">

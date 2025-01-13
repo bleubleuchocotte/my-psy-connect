@@ -5,7 +5,7 @@ import { LucideArrowUpRight } from "lucide-vue-next";
 <template>
 	<UIContainerHeading class="page-home-advantages-solo-heading">
 		<template #icon>
-			<IconCustomHeadset class="page-home-advantages-solo-heading__icon" />
+			<IconCustomHeadset />
 		</template>
 		<template #title>
 			<h2 class="page-home-advantages-solo-heading__title">
@@ -30,19 +30,6 @@ import { LucideArrowUpRight } from "lucide-vue-next";
 .page-home-advantages-solo-heading {
 	align-items: flex-start;
 	text-align: left;
-
-	&__icon {
-		height: rem(80);
-		width: rem(80);
-
-		color: var(--green);
-		align-self: flex-start;
-
-		@media not #{$desktop} {
-			height: rem(60);
-			width: rem(60);
-		}
-	}
 
 	&__title {
 		align-self: flex-start;

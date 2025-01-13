@@ -5,7 +5,7 @@ import { LucideArrowUpRight } from "lucide-vue-next";
 <template>
 	<UIContainerHeading class="page-home-psychologist-heading">
 		<template #icon>
-			<IconCustomProfile />
+			<IconCustomProfile class="center" />
 		</template>
 		<template #title>
 			<h2 class="h1">

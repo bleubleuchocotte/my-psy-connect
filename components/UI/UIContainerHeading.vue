@@ -33,7 +33,25 @@
 		@include gap(24);
 
 		&-icon {
+			width: 100%;
+
 			color: var(--green);
+
+			align-self: flex-start;
+
+			:deep(svg.center) {
+				margin: 0 auto;
+			}
+
+			:deep(svg:not(.center)) {
+				height: rem(80);
+				width: rem(80);
+
+				@media not #{$desktop} {
+					height: rem(60);
+					width: rem(60);
+				}
+			}
 		}
 	}
 }
