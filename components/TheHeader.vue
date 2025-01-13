@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { LucideMail } from 'lucide-vue-next';
+
 const { y } = useWindowScroll();
 </script>
 
@@ -9,7 +11,7 @@ const { y } = useWindowScroll();
 
 			<UIButton class="header__absolute-cta">
 				Rejoignez-nous
-				<LucideMail color="var(--beige)" />
+				<LucideMail stroke="var(--beige)" stroke-width="2" />
 			</UIButton>
 		</div>
 
