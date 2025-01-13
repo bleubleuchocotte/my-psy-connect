@@ -43,6 +43,7 @@ const { y } = useWindowScroll();
 		justify-content: space-between;
 		align-items: center;
 		position: absolute;
+		z-index: 999;
 		left: 0;
 		width: 100%;
 		@include prop("top", 24);

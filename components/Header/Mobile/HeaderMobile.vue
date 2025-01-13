@@ -36,6 +36,7 @@ watch(isMenuBurgerOpen, () => {
 <style lang="scss" scoped>
 .header-mobile {
 	position: relative;
+	z-index: 999;
 
 	&__container {
 		width: 100%;
