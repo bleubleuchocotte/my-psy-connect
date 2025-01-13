@@ -25,6 +25,8 @@ const { y } = useWindowScroll();
 
 <style lang="scss" scoped>
 .header {
+	position: relative;
+
 	--padding-inline: 118;
 
 	@media screen and (max-width: 1400px) {
@@ -33,8 +35,6 @@ const { y } = useWindowScroll();
 	@media screen and (max-width: 1200px) {
 		--padding-inline: 16;
 	}
-
-	position: relative;
 
 	@include wrapper(1440px, var(--padding-inline));
 
