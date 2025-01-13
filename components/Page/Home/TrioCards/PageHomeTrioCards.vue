@@ -2,7 +2,7 @@
 	<section class="page-home-trio-cards">
 		<PageHomeTrioCardsCard background-src="/images/background/card-1.png">
 			<template #icon>
-				<IconCustomGroup />
+				<IconCustomPuzzle />
 			</template>
 			<template #title>
 				<h2>Séances de groupe</h2>
@@ -16,7 +16,7 @@
 		</PageHomeTrioCardsCard>
 		<PageHomeTrioCardsCard background-src="/images/background/card-2.png">
 			<template #icon>
-				<IconCustomChatSmall />
+				<IconCustomChat />
 			</template>
 			<template #title>
 				<h2>Séances<br>individuelles</h2>
