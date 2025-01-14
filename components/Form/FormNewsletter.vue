@@ -1,8 +1,33 @@
 <script setup lang="ts">
 import { LucideSend } from "lucide-vue-next";
 
-const onSubmit: (_: Event) => void = (e: Event) => {
-	console.warn(e);
+const request = ref<"idle" | "pending">("idle");
+const state = ref<"idle" | "success" | "error">("idle");
+
+const onSubmit: (_: Event) => void = async (e: Event) => {
+	request.value = "pending";
+
+	const target = e.target as HTMLFormElement;
+	const formdata = new FormData(target);
+	const body = {
+		name: formdata.get("name"),
+		phone: formdata.get("phone"),
+		email: formdata.get("email"),
+	};
+
+	try {
+		await $fetch("/api/email", {
+			method: "POST",
+			body,
+		});
+
+		state.value = "success";
+	}
+	catch {
+		state.value = "error";
+	}
+
+	request.value = "idle";
 };
 </script>
 
@@ -12,17 +37,30 @@ const onSubmit: (_: Event) => void = (e: Event) => {
 			Rejoignez la communauté MyPsy et recevez des ressources, invitations à des webinaires et news sur l'avancée de la plateforme.
 		</p>
 
-		<FormNewsletterInputs />
+		<p v-if="state !== 'idle'" class="p" :state>
+			<template v-if="state === 'error'">
+				Oups, le mail n'as pas pu être envoyé :(
+			</template>
+			<template v-else>
+				Le mail a bien été envoyé !
+			</template>
+		</p>
+
+		<FormNewsletterInputs :disabled="state === 'success' || request === 'pending'" />
 
 		<div class="form-newsletter__consent">
-			<input id="consent" type="checkbox" name="consent">
-			<label for="consent">
+			<input id="consent" type="checkbox" name="consent" required :disabled="state === 'success' || request === 'pending'">
+			<label for="consent" class="p-secondary" :disabled="state === 'success' || request === 'pending'">
 				Oui, je consens à recevoir des emails
 			</label>
 		</div>
 
-		<UIButton type="submit" class="form-newsletter__submit">
-			Envoyer mes coordonnées <LucideSend stroke="var(--beige)" stroke-width="2" />
+		<UIButton type="submit" class="form-newsletter__submit" :disabled="state === 'success' || request === 'pending'">
+			<span class="form-newsletter__submit-text" :data-hide="request === 'pending'">
+				Envoyer mes coordonnées <LucideSend stroke="var(--beige)" stroke-width="2" />
+			</span>
+
+			<UISpinningLoader class="form-newsletter__submit-loading" :data-hide="request === 'idle'" />
 		</UIButton>
 
 		<p class="form-newsletter__legal">
@@ -56,6 +94,11 @@ const onSubmit: (_: Event) => void = (e: Event) => {
 		max-width: unset;
 	}
 
+	p[state="success"] {
+		color: var(--green);
+		font-weight: 600;
+	}
+
 	&__heading {
 		font-weight: bold !important;
 	}
@@ -77,19 +120,45 @@ const onSubmit: (_: Event) => void = (e: Event) => {
 			&:checked {
 				background-color: var(--green);
 			}
+
+			&[disabled] {
+				background-color: var(--medium-grey);
+				cursor: not-allowed;
+			}
 		}
 
 		label {
 			cursor: pointer;
 			color: var(--fake-black);
-			@include font("p");
+
+			&[disabled] {
+				font-style: italic;
+				cursor: not-allowed;
+			}
 		}
 	}
 
 	&__submit {
+		position: relative;
 		width: fit-content;
 		background-color: var(--green);
 		color: var(--beige);
+
+		[data-hide="true"] {
+			visibility: hidden;
+		}
+
+		&-text {
+			display: flex;
+			align-items: center;
+			gap: rem(10);
+		}
+
+		&-loading {
+			position: absolute;
+
+			left: calc(50% - rem(12));
+		}
 	}
 
 	&__legal {
