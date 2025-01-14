@@ -30,7 +30,9 @@ import { LucideInfo, LucideQuote } from "lucide-vue-next";
 		</PageHeader>
 
 		<PageAboutIdea />
+		<PageAboutTestimony />
 		<PageAboutTestimony2 />
+		<PageHomeAction />
 	</main>
 </template>
 
