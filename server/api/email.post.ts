@@ -15,9 +15,11 @@ export default defineEventHandler(async (event) => {
 		"content-type": "application/json",
 	});
 
-	return await $fetch("https://api.emailjs.com/api/v1.0/email/send", {
+	const res = await $fetch("https://api.emailjs.com/api/v1.0/email/send", {
 		method: "POST",
 		body: data,
 		headers,
 	});
+
+	return res;
 });
