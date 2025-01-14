@@ -4,6 +4,36 @@ import { LucideMail, LucideX } from "lucide-vue-next";
 defineEmits<{
 	close: []
 }>();
+
+const links: {
+	href: string
+	name: string
+}[] = [
+	{
+		href: "/",
+		name: "Accueil",
+	},
+	{
+		href: "/services",
+		name: "Services",
+	},
+	{
+		href: "/partenaires",
+		name: "Partenaires",
+	},
+	{
+		href: "/equipe",
+		name: "Nos Psychologues",
+	},
+	{
+		href: "/ressources",
+		name: "Ressources",
+	},
+	{
+		href: "/a-propos",
+		name: "À Propos",
+	},
+];
 </script>
 
 <template>
@@ -16,29 +46,17 @@ defineEmits<{
 		</div>
 
 		<nav class="header-mobile-menu-burger__navigation">
-			<NuxtLink class="h2 reset-ua" prefetch>
-				Accueil
-			</NuxtLink>
-			<NuxtLink class="h2 reset-ua" prefetch>
-				Service
-			</NuxtLink>
-			<NuxtLink class="h2 reset-ua" prefetch>
-				Partenaires
-			</NuxtLink>
-			<NuxtLink class="h2 reset-ua" prefetch>
-				Nos Psychologues
-			</NuxtLink>
-			<NuxtLink class="h2 reset-ua" prefetch>
-				Ressources
-			</NuxtLink>
-			<NuxtLink class="h2 reset-ua" prefetch>
-				À Propos
+			<NuxtLink
+				v-for="link in links" :key="link.href"
+				class="h2 reset-ua" prefetch :href="link.href" @click="$emit('close')"
+			>
+				{{ link.name }}
 			</NuxtLink>
 		</nav>
 
-		<UIButton class="header-mobile-menu-burger__contact-us">
+		<NuxtLink class="header-mobile-menu-burger__contact-us reset-ua button" href="mailto:quentin.mypsy@gmail.com">
 			Contactez-nous <LucideMail stroke="var(--beige)" stroke-width="2" />
-		</UIButton>
+		</NuxtLink>
 	</div>
 </template>
 

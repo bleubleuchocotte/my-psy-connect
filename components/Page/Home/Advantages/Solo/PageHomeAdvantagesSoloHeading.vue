@@ -19,9 +19,10 @@ import { LucideArrowUpRight } from "lucide-vue-next";
 			</p>
 		</template>
 		<template #cta>
-			<UIButton class="page-home-advantages-solo-heading__cta">
-				En savoir plus <LucideArrowUpRight stroke="var(--white)" stroke-width="2" />
-			</UIButton>
+			<NuxtLink class="page-home-advantages-solo-heading__cta reset-ua button" href="/services">
+				En savoir plus
+				<LucideArrowUpRight stroke="var(--white)" stroke-width="2" />
+			</NuxtLink>
 		</template>
 	</UIContainerHeading>
 </template>

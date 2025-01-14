@@ -9,7 +9,7 @@ defineProps<ComponentProps>();
 </script>
 
 <template>
-	<div class="home-card-post-hero" :style="`background: linear-gradient(#0c1b3300 0%, #0c1b33 100%), url('${backgroundSrc}')`">
+	<div class="home-card-post-hero" :style="`background: url('${backgroundSrc}')`">
 		<div class="home-card-post-hero__icon">
 			<slot name="icon" />
 		</div>
@@ -18,9 +18,9 @@ defineProps<ComponentProps>();
 			<slot name="content" />
 		</div>
 
-		<UIButton class="home-card-post-hero__cta">
+		<NuxtLink class="home-card-post-hero__cta reset-ua button" href="/services">
 			En savoir plus <LucideArrowUpRight stroke="var(--dark-blue)" stroke-width="2" />
-		</UIButton>
+		</NuxtLink>
 	</div>
 </template>
 
@@ -58,8 +58,9 @@ defineProps<ComponentProps>();
 	}
 
 	&__cta {
-		width: fit-content;
-		@include prop("margin-top", 15);
+		background-color: var(--beige);
+		color: var(--dark-blue);
+		margin-top: rem(15);
 	}
 
 	&__content {

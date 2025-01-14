@@ -11,6 +11,8 @@ watch(isMenuBurgerOpen, () => {
 		document.body.style.overflow = "auto";
 	}
 });
+
+const route = useRoute();
 </script>
 
 <template>
@@ -19,9 +21,9 @@ watch(isMenuBurgerOpen, () => {
 			<IconLogoWithText class="header__absolute-logo" />
 
 			<div class="header-mobile__container-controls">
-				<UIButton>
+				<NuxtLink v-if="route.name !== 'formulaire'" class="reset-ua button" href="/formulaire">
 					<LucideMail stroke="var(--beige)" stroke-width="2" />
-				</UIButton>
+				</NuxtLink>
 
 				<UIButton @click="isMenuBurgerOpen = true">
 					<LucideMenu stroke="var(--dark-blue)" stroke-width="2" />
@@ -53,21 +55,22 @@ watch(isMenuBurgerOpen, () => {
 
 			gap: rem(10);
 
-			button {
+			button,
+			a {
 				justify-content: center;
 
 				width: 54px;
 				height: 54px;
 
 				padding: 0 !important;
+			}
 
-				&:first-of-type {
-					background-color: var(--dark-blue);
-				}
+			a {
+				background-color: var(--dark-blue);
+			}
 
-				&:last-of-type {
-					background-color: var(--white);
-				}
+			button {
+				background-color: var(--white);
 			}
 		}
 	}

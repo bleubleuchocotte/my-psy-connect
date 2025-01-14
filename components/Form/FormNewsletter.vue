@@ -136,7 +136,7 @@ const onSubmit: (_: Event) => void = async (e: Event) => {
 			cursor: pointer;
 			color: var(--fake-black);
 
-			&[disabled] {
+			&[disabled="true"] {
 				font-style: italic;
 				cursor: not-allowed;
 			}

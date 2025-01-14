@@ -23,7 +23,9 @@
 					</p>
 				</template>
 				<template #link>
-					en savoir plus
+					<NuxtLink href="/equipe">
+						en savoir plus
+					</NuxtLink>
 				</template>
 			</PageHomePsychologistContentCard>
 		</div>

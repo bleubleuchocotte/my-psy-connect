@@ -2,6 +2,8 @@
 import { LucideMail } from "lucide-vue-next";
 
 const { y } = useWindowScroll();
+
+const route = useRoute();
 </script>
 
 <template>
@@ -9,12 +11,12 @@ const { y } = useWindowScroll();
 		<div class="header__absolute">
 			<IconLogoWithText class="header__absolute-logo" />
 
-			<UIButton class="header__absolute-cta">
+			<NuxtLink :hide="route.name === 'formulaire'" class="header__absolute-cta reset-ua button" href="/formulaire">
 				<span>
 					Rejoignez-nous
 				</span>
 				<LucideMail stroke="var(--beige)" stroke-width="2" />
-			</UIButton>
+			</NuxtLink>
 		</div>
 
 		<div class="header__navigation" :data-scroll="y > 10">
@@ -52,6 +54,10 @@ const { y } = useWindowScroll();
 		&-cta {
 			background-color: var(--dark-blue);
 			color: var(--beige);
+
+			&[hide="true"] {
+				visibility: hidden;
+			}
 
 			span {
 				@media screen and (max-width: 1250px) {

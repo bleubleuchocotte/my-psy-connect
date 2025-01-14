@@ -1,15 +1,18 @@
 <script setup lang="ts">
 import { LucideMail, LucideSmilePlus } from "lucide-vue-next";
+
+const route = useRoute();
 </script>
 
 <template>
 	<div class="footer-controls">
-		<UIButton class="footer-controls__join">
+		<NuxtLink v-if="route.name !== 'formulaire'" class="footer-controls__join reset-ua button" href="/formulaire">
 			Rejoignez-nous <LucideSmilePlus stroke="var(--white)" stroke-width="2" />
-		</UIButton>
-		<UIButton class="footer-controls__ask">
+		</NuxtLink>
+
+		<NuxtLink class="footer-controls__ask reset-ua button" href="mailto:quentin.mypsy@gmail.com">
 			Une question ? <LucideMail stroke="var(--dark-blue)" stroke-width="2" />
-		</UIButton>
+		</NuxtLink>
 	</div>
 </template>
 
@@ -21,7 +24,8 @@ import { LucideMail, LucideSmilePlus } from "lucide-vue-next";
 	@media not #{$desktop} {
 		flex-direction: column;
 
-		button {
+		a {
+			width: 100%;
 			justify-content: center;
 		}
 	}
