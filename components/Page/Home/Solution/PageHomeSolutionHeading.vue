@@ -1,7 +1,7 @@
 <template>
 	<UIContainerHeading>
 		<template #icon>
-			<IconCustomSecure />
+			<IconCustomSecure class="center" />
 		</template>
 		<template #title>
 			<h2 class="h1">

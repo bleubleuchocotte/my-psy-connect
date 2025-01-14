@@ -1,7 +1,7 @@
 <template>
 	<UIContainerHeading class="page-home-hero-heading">
 		<template #icon>
-			<IconCustomCloud />
+			<IconCustomCloud class="center" />
 		</template>
 		<template #title>
 			<h2>

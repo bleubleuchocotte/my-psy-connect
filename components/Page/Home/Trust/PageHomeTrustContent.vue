@@ -4,26 +4,26 @@ import { LucideArrowUpRight } from "lucide-vue-next";
 
 <template>
 	<div class="page-home-trust-content">
-		<NuxtMarquee class="page-home-trust-content__marquee" :auto-fill="true" hide="mobile">
+		<NuxtMarquee class="page-home-trust-content__marquee" :auto-fill="true" hide="mobile" tabindex="-1">
 			<div class="page-home-trust-content__marquee-item">
-				<IconLaFrenchTech />
-				<IconAgefiph />
-				<IconChambreCommerceIndustrie />
+				<IconPartnerLaFrenchTech />
+				<IconPartnerAgefiph />
+				<IconPartnerCCI />
 			</div>
 		</NuxtMarquee>
 
 		<div class="page-home-trust-content__fake-marquee" hide="mobile" />
 
 		<div hide="desktop" class="page-home-trust-content__mobile">
-			<IconLaFrenchTech />
-			<IconAgefiph />
-			<IconChambreCommerceIndustrie />
+			<IconPartnerLaFrenchTech />
+			<IconPartnerAgefiph />
+			<IconPartnerCCI />
 		</div>
 
-		<UIButton class="page-home-trust-content__cta">
+		<NuxtLink class="page-home-trust-content__cta reset-ua button" href="/partenaires">
 			En savoir plus sur nos partenaires
 			<LucideArrowUpRight stroke="var(--dark-blue)" stroke-width="2" />
-		</UIButton>
+		</NuxtLink>
 	</div>
 </template>
 
@@ -67,12 +67,7 @@ import { LucideArrowUpRight } from "lucide-vue-next";
 	&__cta {
 		color: var(--black);
 		background: transparent;
-		border-color: currentColor;
-		width: fit-content;
-
-		:deep(path) {
-			stroke: currentColor;
-		}
+		border: 2px solid;
 	}
 }
 </style>

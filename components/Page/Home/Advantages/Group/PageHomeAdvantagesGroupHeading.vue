@@ -5,7 +5,7 @@ import { LucideArrowUpRight } from "lucide-vue-next";
 <template>
 	<UIContainerHeading class="page-home-advantages-heading">
 		<template #icon>
-			<IconCustomGroup class="page-home-advantages-heading__icon" />
+			<IconCustomPuzzle />
 		</template>
 		<template #title>
 			<h2 class="page-home-advantages-heading__title">
@@ -18,28 +18,16 @@ import { LucideArrowUpRight } from "lucide-vue-next";
 			</p>
 		</template>
 		<template #cta>
-			<UIButton class="page-home-advantages-heading__cta">
-				En savoir plus <LucideArrowUpRight />
-			</UIButton>
+			<NuxtLink class="page-home-advantages-heading__cta reset-ua button" href="/services">
+				En savoir plus
+				<LucideArrowUpRight stroke="var(--white)" stroke-width="2" />
+			</NuxtLink>
 		</template>
 	</UIContainerHeading>
 </template>
 
 <style scoped lang="scss">
 .page-home-advantages-heading {
-	&__icon {
-		height: rem(80);
-		width: rem(80);
-
-		color: var(--green);
-		align-self: flex-start;
-
-		@media not #{$desktop} {
-			height: rem(60);
-			width: rem(60);
-		}
-	}
-
 	&__title,
 	&__text {
 		align-self: flex-start;

@@ -5,7 +5,7 @@
 		<div class="page-home-psychologist-content__card">
 			<PageHomePsychologistContentCard>
 				<template #avatar>
-					<img src="/images/avatar/guenon.png" alt="">
+					<NuxtImg preload src="/images/avatar/guenon.png" alt="" loading="lazy" />
 				</template>
 				<template #name>
 					<h3>
@@ -23,7 +23,9 @@
 					</p>
 				</template>
 				<template #link>
-					en savoir plus
+					<NuxtLink href="/equipe">
+						en savoir plus
+					</NuxtLink>
 				</template>
 			</PageHomePsychologistContentCard>
 		</div>

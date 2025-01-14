@@ -5,7 +5,7 @@ import { LucideArrowUpRight } from "lucide-vue-next";
 <template>
 	<UIContainerHeading class="page-home-psychologist-heading">
 		<template #icon>
-			<IconCustomProfile />
+			<IconCustomProfile class="center" />
 		</template>
 		<template #title>
 			<h2 class="h1">
@@ -19,9 +19,9 @@ import { LucideArrowUpRight } from "lucide-vue-next";
 			</p>
 		</template>
 		<template #cta>
-			<UIButton class="page-home-psychologist-heading__cta">
+			<NuxtLink class="page-home-psychologist-heading__cta reset-ua button" href="/equipe">
 				Découvrir <LucideArrowUpRight stroke="var(--white)" stroke-width="2" />
-			</UIButton>
+			</NuxtLink>
 		</template>
 	</UIContainerHeading>
 </template>

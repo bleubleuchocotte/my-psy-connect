@@ -32,6 +32,8 @@ const props = withDefaults(defineProps<ButtonHTMLAttributes & ComponentProps>(),
 
 <style scoped lang="scss">
 .ui-button {
+	cursor: pointer;
+
 	display: flex;
 	align-items: center;
 	border-style: solid;
@@ -52,17 +54,8 @@ const props = withDefaults(defineProps<ButtonHTMLAttributes & ComponentProps>(),
 		@include prop("padding-inline", 10);
 	}
 
-	&:not([disabled]) {
-		cursor: pointer;
-
-		&:hover {
-		}
-
-		// focus-visible let the UA determines when it need to apply focus style
-		&:focus,
-		&:focus-within,
-		&:focus-visible {
-		}
+	&[disabled] {
+		cursor: not-allowed !important;
 	}
 }
 </style>

@@ -34,6 +34,10 @@ h3,
 	@include font("h3");
 }
 
+small {
+	@include font("small");
+}
+
 select {
 	color: currentColor; // Reset blue color from -apple-system-blue ios 15
 }
@@ -61,7 +65,7 @@ select {
 
 html {
 	font-family: "Figtree", Arial, Helvetica, sans-serif;
-	accent-color: var(--accent);
+	accent-color: var(--dark-blue);
 }
 
 body {
@@ -69,14 +73,9 @@ body {
 	color: var(--text);
 }
 
-input {
-	background-color: var(--background);
-	color: var(--dark-grey);
-	border-color: currentColor;
-
-	&:focus {
-		outline: unset;
-	}
+input.reset-ua {
+	border: unset;
+	appearance: none;
 }
 
 [hide="desktop"] {
@@ -88,4 +87,43 @@ input {
 	@media not #{$desktop} {
 		display: none !important;
 	}
+}
+
+a.reset-ua {
+	color: var(--text);
+	text-decoration: none;
+}
+
+a.button {
+	width: fit-content;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: rem(10);
+
+	padding-inline: rem(25);
+	height: rem(54);
+
+	border-radius: 50px;
+
+	@include font("cta");
+}
+
+section.container {
+	padding-inline: rem(118);
+	padding-block: rem(94);
+
+	border-radius: 10px;
+
+	@media not #{$desktop} {
+		padding: rem(20);
+		padding-bottom: rem(80);
+	}
+}
+
+main.page {
+	display: flex;
+	flex-direction: column;
+	gap: rem(24);
 }

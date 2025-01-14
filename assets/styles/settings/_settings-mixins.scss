@@ -1,3 +1,5 @@
+@use "./settings-variables" as *;
+
 @function rem($px) {
 	@return calc(1rem * $px / 16);
 }

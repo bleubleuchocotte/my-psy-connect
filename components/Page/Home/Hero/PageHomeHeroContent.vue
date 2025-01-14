@@ -1,9 +1,13 @@
 <template>
 	<UIContainerContent>
 		<template #content>
-			<div>
-				TODO: Encart envoie de coordonnées
-			</div>
+			<FormNewsletter class="page-home-hero-content__form" />
 		</template>
 	</UIContainerContent>
 </template>
+
+<style scoped lang="scss">
+.page-home-hero-content__form {
+	max-width: rem(684);
+}
+</style>

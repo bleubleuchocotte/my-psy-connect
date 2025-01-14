@@ -1,56 +1,173 @@
 <script setup lang="ts">
-type ComponentProps = {
-	variant?: "default" | "footer"
-};
+import { LucideSend } from "lucide-vue-next";
 
-withDefaults(defineProps<ComponentProps>(), {
-	variant: "default",
-});
+const request = ref<"idle" | "pending">("idle");
+const state = ref<"idle" | "success" | "error">("idle");
 
-const onSubmit: (_: Event) => void = (e: Event) => {
-	console.warn(e);
+const onSubmit: (_: Event) => void = async (e: Event) => {
+	request.value = "pending";
+
+	const target = e.target as HTMLFormElement;
+	const formdata = new FormData(target);
+	const body = {
+		name: formdata.get("name"),
+		phone: formdata.get("phone"),
+		email: formdata.get("email"),
+	};
+
+	try {
+		await $fetch("/api/email", {
+			method: "POST",
+			body,
+		});
+
+		state.value = "success";
+	}
+	catch {
+		state.value = "error";
+	}
+
+	request.value = "idle";
 };
 </script>
 
 <template>
-	<form class="form-newsletter" :data-variant="variant" @submit.prevent="onSubmit">
-		<input type="text" placeholder="S'inscrire à la newsletter" class="form-newsletter__input">
-		<UIButton class="form-newsletter__submit" type="submit">
-			Envoyer <LucideSend color="var(--beige)" />
+	<form class="form-newsletter" @submit.prevent="onSubmit">
+		<p class="form-newsletter__heading">
+			Rejoignez la communauté MyPsy et recevez des ressources, invitations à des webinaires et news sur l'avancée de la plateforme.
+		</p>
+
+		<p v-if="state !== 'idle'" class="p" :state>
+			<template v-if="state === 'error'">
+				Oups, le mail n'as pas pu être envoyé :(
+			</template>
+			<template v-else>
+				Le mail a bien été envoyé !
+			</template>
+		</p>
+
+		<FormNewsletterInputs :disabled="state === 'success' || request === 'pending'" />
+
+		<div class="form-newsletter__consent">
+			<input id="consent" type="checkbox" name="consent" required :disabled="state === 'success' || request === 'pending'">
+			<label for="consent" class="p-secondary" :disabled="state === 'success' || request === 'pending'">
+				Oui, je consens à recevoir des emails
+			</label>
+		</div>
+
+		<UIButton type="submit" class="form-newsletter__submit" :disabled="state === 'success' || request === 'pending'">
+			<span class="form-newsletter__submit-text" :data-hide="request === 'pending'">
+				Envoyer mes coordonnées <LucideSend stroke="var(--beige)" stroke-width="2" />
+			</span>
+
+			<UISpinningLoader class="form-newsletter__submit-loading" :data-hide="request === 'idle'" />
 		</UIButton>
+
+		<p class="form-newsletter__legal">
+			<small>
+				En partageant vos coordonnées avec MyPsy, vous nous permettez de vous envoyer des informations pratiques sur le burnout, des invitations à nos prochains webinaires, ainsi que notre newsletter pour rester informé des actualités de la plateforme. Les adresses e-mail recueillies sont utilisées exclusivement à des fins informatives et ne seront jamais partagées ou revendues à des tiers. Nous garantissons la confidentialité et la sécurité de vos données.
+			</small>
+		</p>
 	</form>
 </template>
 
 <style scoped lang="scss">
 .form-newsletter {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	flex-direction: column;
+	gap: rem(24);
 
-	background-color: var(--white);
+	padding: rem(40);
 
-	@include prop("border-radius", 50);
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 1px var(--extra-light-green);
 
-	&__input {
-		border: unset;
+	backdrop-filter: var(--blur);
 
-		@include prop("margin-inline", 20);
+	border-radius: 10px;
+
+	max-width: rem(448);
+
+	@media not #{$desktop} {
+		padding-inline: rem(20);
+		padding-block: rem(30);
+		max-width: unset;
+	}
+
+	p[state="success"] {
+		color: var(--green);
+		font-weight: 600;
+	}
+
+	p[state="error"] {
+		color: red;
+		font-weight: 600;
+	}
+
+	&__heading {
+		font-weight: bold !important;
+	}
+
+	&__consent {
+		display: flex;
+		gap: rem(10);
+
+		input[type="checkbox"] {
+			cursor: pointer;
+			width: rem(17);
+			height: rem(17);
+			background-color: var(--white);
+			border-radius: 3px;
+			box-shadow: 0 0 0 1px var(--fake-black);
+
+			appearance: none;
+
+			&:checked {
+				background-color: var(--green);
+			}
+
+			&[disabled] {
+				background-color: var(--medium-grey);
+				cursor: not-allowed;
+			}
+		}
+
+		label {
+			cursor: pointer;
+			color: var(--fake-black);
+
+			&[disabled="true"] {
+				font-style: italic;
+				cursor: not-allowed;
+			}
+		}
 	}
 
 	&__submit {
-		color: var(--beige);
+		position: relative;
+		width: fit-content;
 		background-color: var(--green);
+		color: var(--beige);
+
+		[data-hide="true"] {
+			visibility: hidden;
+		}
+
+		&-text {
+			display: flex;
+			align-items: center;
+			gap: rem(10);
+		}
+
+		&-loading {
+			position: absolute;
+
+			left: calc(50% - rem(12));
+		}
 	}
 
-	&[data-variant="footer"] {
-		box-shadow: var(--box-shadow);
-		@include padding(5);
-
-		.form-newsletter {
-			&__submit {
-				background-color: var(--dark-blue);
-			}
-		}
+	&__legal {
+		color: var(--fake-black);
 	}
 }
 </style>
