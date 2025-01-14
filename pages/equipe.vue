@@ -48,7 +48,7 @@ import { LucideMessagesSquare, LucideUsers2 } from "lucide-vue-next";
 				</NuxtLink>
 			</template>
 			<template #image>
-				<img alt="" src="/images/team/guenon.png">
+				<NuxtImg prelaod alt="" src="/images/team/guenon.png" loading="lazy" />
 			</template>
 		</UISectionTextImage>
 

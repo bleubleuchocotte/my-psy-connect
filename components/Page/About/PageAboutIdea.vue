@@ -1,8 +1,8 @@
 <template>
 	<section class="page-about-idea">
 		<div class="page-about-idea__start">
-			<img alt="" src="/images/about/french-tech-2.png">
-			<img alt="" src="/images/about/french-tech-1.png">
+			<NuxtImg alt="" src="/images/about/french-tech-2.png" loading="lazy" preload />
+			<NuxtImg alt="" src="/images/about/french-tech-1.png" loading="lazy" preload />
 		</div>
 
 		<div class="page-about-idea__end">
@@ -18,8 +18,7 @@
 			</div>
 
 			<div class="page-about-idea__end-founder">
-				<img alt="" src="/images/avatar/joubert.png">
-
+				<NuxtImg alt="" src="/images/avatar/joubert.png" loading="lazy" preload />
 				<div class="page-about-idea__end-founder-info">
 					<div>
 						<h3>Quentin Joubert</h3>

@@ -5,7 +5,7 @@ import { LucideGoal, LucidePersonStanding, LucideShieldCheck, LucideSpeech } fro
 <template>
 	<section class="page-services-webinaires">
 		<div class="page-services-webinaires__start">
-			<img src="/images/services/webinaires.png" alt="">
+			<NuxtImg preload src="/images/services/webinaires.png" alt="" loading="lazy" />
 
 			<div class="page-services-webinaires__start-text">
 				<IconCustomHeadset />

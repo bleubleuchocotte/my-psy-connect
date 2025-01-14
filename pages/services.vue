@@ -39,7 +39,7 @@ import { LucideHeadset } from "lucide-vue-next";
 				Cette approche vous apporte une reconnaissance et un apaisement précieux, en vous connectant avec des personnes qui vous comprennent, pour que vous puissiez, ensemble, trouver des solutions et regagner un sentiment de bien-être partagé.
 			</template>
 			<template #image>
-				<img alt="" src="/images/services/group.png">
+				<NuxtImg alt="" src="/images/services/group.png" loading="lazy" preload />
 			</template>
 		</UISectionTextImage>
 
@@ -56,7 +56,7 @@ import { LucideHeadset } from "lucide-vue-next";
 				Grâce à des vidéos de présentation de nos psychologues, vous pourrez aisément choisir le professionnel qui vous correspond le mieux et ainsi démarrer au plus tôt une thérapie personnalisée.
 			</template>
 			<template #image>
-				<img alt="" src="/images/services/solo.png">
+				<NuxtImg alt="" src="/images/services/solo.png" loading="lazy" preload />
 			</template>
 		</UISectionTextImage>
 

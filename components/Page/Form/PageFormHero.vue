@@ -1,7 +1,7 @@
 <template>
 	<section class="container page-form-hero">
 		<FormNewsletter />
-		<img alt="" src="/images/about/french-tech-2.png">
+		<NuxtImg preload alt="" src="/images/about/french-tech-2.png" loading="lazy" />
 	</section>
 </template>
 
