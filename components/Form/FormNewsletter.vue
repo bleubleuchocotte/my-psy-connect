@@ -99,6 +99,11 @@ const onSubmit: (_: Event) => void = async (e: Event) => {
 		font-weight: 600;
 	}
 
+	p[state="error"] {
+		color: red;
+		font-weight: 600;
+	}
+
 	&__heading {
 		font-weight: bold !important;
 	}
