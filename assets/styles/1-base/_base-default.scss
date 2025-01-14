@@ -34,6 +34,10 @@ h3,
 	@include font("h3");
 }
 
+small {
+	@include font("small");
+}
+
 select {
 	color: currentColor; // Reset blue color from -apple-system-blue ios 15
 }
@@ -61,7 +65,7 @@ select {
 
 html {
 	font-family: "Figtree", Arial, Helvetica, sans-serif;
-	accent-color: var(--accent);
+	accent-color: var(--dark-blue);
 }
 
 body {
@@ -69,14 +73,9 @@ body {
 	color: var(--text);
 }
 
-input {
-	background-color: var(--background);
-	color: var(--dark-grey);
-	border-color: currentColor;
-
-	&:focus {
-		outline: unset;
-	}
+input.reset-ua {
+	border: unset;
+	appearance: none;
 }
 
 [hide="desktop"] {

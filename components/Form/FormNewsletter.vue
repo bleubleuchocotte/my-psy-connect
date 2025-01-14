@@ -1,11 +1,5 @@
 <script setup lang="ts">
-type ComponentProps = {
-	variant?: "default" | "footer"
-};
-
-withDefaults(defineProps<ComponentProps>(), {
-	variant: "default",
-});
+import { LucideSend } from "lucide-vue-next";
 
 const onSubmit: (_: Event) => void = (e: Event) => {
 	console.warn(e);
@@ -13,44 +7,93 @@ const onSubmit: (_: Event) => void = (e: Event) => {
 </script>
 
 <template>
-	<form class="form-newsletter" :data-variant="variant" @submit.prevent="onSubmit">
-		<input type="text" placeholder="S'inscrire à la newsletter" class="form-newsletter__input">
-		<UIButton class="form-newsletter__submit" type="submit">
-			Envoyer <LucideSend color="var(--beige)" />
+	<form class="form-newsletter" @submit.prevent="onSubmit">
+		<p class="form-newsletter__heading">
+			Rejoignez la communauté MyPsy et recevez des ressources, invitations à des webinaires et news sur l'avancée de la plateforme.
+		</p>
+
+		<FormNewsletterInputs />
+
+		<div class="form-newsletter__consent">
+			<input id="consent" type="checkbox" name="consent">
+			<label for="consent">
+				Oui, je consens à recevoir des emails
+			</label>
+		</div>
+
+		<UIButton type="submit" class="form-newsletter__submit">
+			Envoyer mes coordonnées <LucideSend stroke="var(--beige)" stroke-width="2" />
 		</UIButton>
+
+		<p class="form-newsletter__legal">
+			<small>
+				En partageant vos coordonnées avec MyPsy, vous nous permettez de vous envoyer des informations pratiques sur le burnout, des invitations à nos prochains webinaires, ainsi que notre newsletter pour rester informé des actualités de la plateforme. Les adresses e-mail recueillies sont utilisées exclusivement à des fins informatives et ne seront jamais partagées ou revendues à des tiers. Nous garantissons la confidentialité et la sécurité de vos données.
+			</small>
+		</p>
 	</form>
 </template>
 
 <style scoped lang="scss">
 .form-newsletter {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	flex-direction: column;
+	gap: rem(24);
 
-	background-color: var(--white);
+	padding: rem(40);
 
-	@include prop("border-radius", 50);
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 0 1px var(--extra-light-green);
 
-	&__input {
-		border: unset;
+	backdrop-filter: var(--blur);
 
-		@include prop("margin-inline", 20);
+	border-radius: 10px;
+
+	max-width: rem(448);
+
+	@media not #{$desktop} {
+		padding-inline: rem(20);
+		padding-block: rem(30);
+		max-width: unset;
+	}
+
+	&__heading {
+		font-weight: bold !important;
+	}
+
+	&__consent {
+		display: flex;
+		gap: rem(10);
+
+		input[type="checkbox"] {
+			cursor: pointer;
+			width: rem(17);
+			height: rem(17);
+			background-color: var(--white);
+			border-radius: 3px;
+			box-shadow: 0 0 0 1px var(--fake-black);
+
+			appearance: none;
+
+			&:checked {
+				background-color: var(--green);
+			}
+		}
+
+		label {
+			cursor: pointer;
+			color: var(--fake-black);
+			@include font("p");
+		}
 	}
 
 	&__submit {
-		color: var(--beige);
+		width: fit-content;
 		background-color: var(--green);
+		color: var(--beige);
 	}
 
-	&[data-variant="footer"] {
-		box-shadow: var(--box-shadow);
-		@include padding(5);
-
-		.form-newsletter {
-			&__submit {
-				background-color: var(--dark-blue);
-			}
-		}
+	&__legal {
+		color: var(--fake-black);
 	}
 }
 </style>

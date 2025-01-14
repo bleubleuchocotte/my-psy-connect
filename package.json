@@ -23,6 +23,7 @@
 		"@nuxtjs/sitemap": "6.0.1",
 		"@vueuse/core": "11.0.3",
 		"@vueuse/nuxt": "11.0.3",
+		"intl-tel-input": "^25.2.1",
 		"lucide-vue-next": "^0.469.0",
 		"nuxt": "3.13.1",
 		"nuxt-marquee": "^1.0.4",
