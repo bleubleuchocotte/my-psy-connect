@@ -1,6 +1,6 @@
 <template>
 	<section class="container page-form-hero">
-		<div>TODO: form</div>
+		<FormNewsletter />
 		<img alt="" src="/images/about/french-tech-2.png">
 	</section>
 </template>
@@ -20,8 +20,13 @@
 	}
 
 	img {
+		max-width: rem(440);
 		object-fit: cover;
 		border-radius: 10px;
+
+		@media not #{$desktop} {
+			max-width: unset;
+		}
 	}
 }
 </style>

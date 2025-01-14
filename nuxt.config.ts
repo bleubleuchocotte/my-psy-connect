@@ -75,5 +75,12 @@ export default defineNuxtConfig({
 		},
 	},
 
+	runtimeConfig: {
+		emailjsPublicKey: "",
+		emailjsPrivateKey: "",
+		emailjsServiceId: "",
+		emailjsTemplateId: "",
+	},
+
 	compatibilityDate: "2024-08-29",
 });
