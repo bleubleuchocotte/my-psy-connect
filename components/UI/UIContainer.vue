@@ -23,20 +23,21 @@ withDefaults(defineProps<ComponentProps>(), {
 
 	&[data-direction="row"] {
 		flex-direction: row;
-		@include gap(142);
+		gap: rem(142);
 	}
 	&[data-direction="row-reverse"] {
 		flex-direction: row-reverse;
-		@include gap(142);
+		gap: rem(142);
 	}
 	&[data-direction="column"] {
 		flex-direction: column;
-		@include gap(60);
+		gap: rem(60);
 	}
 
-	@include prop("border-radius", 10);
-	@include prop("padding-block", 94);
-	@include prop("padding-inline", 118);
+	border-radius: 10px;
+
+	padding-block: rem(94);
+	padding-inline: rem(118);
 
 	@media not #{$desktop} {
 		padding-inline: rem(20);
