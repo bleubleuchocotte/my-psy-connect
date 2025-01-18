@@ -1,6 +1,8 @@
 <script setup lang="ts">
 const { origin } = useRequestURL();
 
+const isDark = usePreferredDark();
+
 updateSiteConfig({
 	name: "MyPsyConnect",
 	url: origin,
@@ -12,11 +14,13 @@ useHead({
 	htmlAttrs: {
 		lang: "fr",
 	},
-	link: [{
-		rel: "icon",
-		type: "image/png",
-		href: `${origin}/favicon-32x32.ico`,
-	}],
+	link: [
+		{
+			rel: "icon",
+			type: "image/svg+xml",
+			href: isDark.value ? `${origin}/favicon/dark-100x100.svg` : `${origin}/favicon/light-100x100.svg`,
+		},
+	],
 });
 
 useSeoMeta({
