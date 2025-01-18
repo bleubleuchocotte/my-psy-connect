@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { LucideBrain, LucideHeartHandshake, LucideLaugh, LucideMessageSquare } from "lucide-vue-next";
+
+const isInViewport = ref(false);
 </script>
 
 <template>
-	<div class="page-home-post-hero-content">
-		<UIContainerContentCard :blur="true">
+	<UIIntersectionObserver class="page-home-post-hero-content" @is-visible="isInViewport = true">
+		<UIContainerContentCard :blur="true" class="page-home-post-hero-content__card" :viewport="isInViewport" position="1">
 			<template #icon>
 				<LucideLaugh stroke="var(--green)" stroke-width="2" />
 			</template>
@@ -15,7 +17,7 @@ import { LucideBrain, LucideHeartHandshake, LucideLaugh, LucideMessageSquare } f
 				<p>Vous aspirez à vous reconnecter à vos valeurs et à redonner un sens à votre travail.</p>
 			</template>
 		</UIContainerContentCard>
-		<UIContainerContentCard :blur="true">
+		<UIContainerContentCard :blur="true" class="page-home-post-hero-content__card" :viewport="isInViewport" position="2">
 			<template #icon>
 				<LucideBrain stroke="var(--green)" stroke-width="2" />
 			</template>
@@ -26,7 +28,7 @@ import { LucideBrain, LucideHeartHandshake, LucideLaugh, LucideMessageSquare } f
 				<p>Vous cherchez des moyens concrets pour apaiser votre épuisement et retrouver de l'énergie.</p>
 			</template>
 		</UIContainerContentCard>
-		<UIContainerContentCard :blur="true">
+		<UIContainerContentCard :blur="true" class="page-home-post-hero-content__card" :viewport="isInViewport" position="3">
 			<template #icon>
 				<LucideMessageSquare stroke="var(--green)" stroke-width="2" />
 			</template>
@@ -37,7 +39,7 @@ import { LucideBrain, LucideHeartHandshake, LucideLaugh, LucideMessageSquare } f
 				<p>Vous souhaitez briser la solitude et trouver un soutien humain et bienveillant.</p>
 			</template>
 		</UIContainerContentCard>
-		<UIContainerContentCard :blur="true">
+		<UIContainerContentCard :blur="true" class="page-home-post-hero-content__card" :viewport="isInViewport" position="4">
 			<template #icon>
 				<LucideHeartHandshake stroke="var(--green)" stroke-width="2" />
 			</template>
@@ -48,7 +50,7 @@ import { LucideBrain, LucideHeartHandshake, LucideLaugh, LucideMessageSquare } f
 				<p>Vous avez besoin d'un environnement qui valorise vos efforts et offre un véritable appui.</p>
 			</template>
 		</UIContainerContentCard>
-	</div>
+	</UIIntersectionObserver>
 </template>
 
 <style scoped lang="scss">
@@ -62,8 +64,32 @@ import { LucideBrain, LucideHeartHandshake, LucideLaugh, LucideMessageSquare } f
 		flex-direction: column;
 	}
 
-	& > div {
+	&__card {
 		flex: 1;
+
+		--position: 1;
+		&[position="2"] {
+			--position: 2;
+		}
+		&[position="3"] {
+			--position: 3;
+		}
+		&[position="4"] {
+			--position: 4;
+		}
+
+		transition:
+			opacity linear 0.4s 0.2s,
+			transform ease-out 0.4s calc(0.1s * var(--position));
+
+		&[viewport="false"] {
+			opacity: 0;
+			transform: translateY(50px);
+		}
+		&[viewport="true"] {
+			opacity: 1;
+			transform: translateY(0px);
+		}
 
 		p {
 			@include font("p");
