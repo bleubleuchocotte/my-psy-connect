@@ -23,7 +23,7 @@ import { LucideFileLock2, LucideHand, LucideMessageSquare, LucidePersonStanding,
 						</template>
 						<template #text>
 							<p>
-								Transformez vos peurs en force. Grâce aux échanges en groupe, développez votre capacité à vous exprimer librement et à oser prendre la parole, même en public, dans un environnement sécurisant.
+								<strong>Transformez vos peurs en force.</strong>Grâce aux échanges en groupe, développez votre capacité à vous exprimer librement et à oser prendre la parole, même en public, dans un <strong>environnement sécurisant.</strong>
 							</p>
 						</template>
 					</UIContainerContentCard>
@@ -38,7 +38,8 @@ import { LucideFileLock2, LucideHand, LucideMessageSquare, LucidePersonStanding,
 						</template>
 						<template #text>
 							<p>
-								Apprenez à dépasser votre peur de l'engagement, qu'il s'agisse d'une relation, d'un projet ou d'une étape de vie.<br>Rejoignez un groupe où vous pourrez partager vos appréhensions et découvrir des stratégies pour aller de l'avant.
+								Apprenez à <strong>dépasser votre peur de l'engagement,</strong> qu'il s'agisse d'une relation, d'un projet ou d'une étape de vie.
+								<br>Rejoignez un groupe où vous pourrez partager vos appréhensions et découvrir des stratégies pour <strong>aller de l'avant.</strong>
 							</p>
 						</template>
 					</UIContainerContentCard>
@@ -53,7 +54,8 @@ import { LucideFileLock2, LucideHand, LucideMessageSquare, LucidePersonStanding,
 						</template>
 						<template #text>
 							<p>
-								Tous nos groupes respectent strictement la confidentialité et l'anonymat, pour que vous puissiez vous exprimer sans retenue.<br>Ce cadre sécurisé favorise une ouverture authentique et libératrice.
+								Tous nos groupes respectent strictement <strong>la confidentialité et l'anonymat,</strong> pour que vous puissiez vous exprimer sans retenue.
+								<br>Ce cadre sécurisé favorise une ouverture <strong>authentique et libératrice.</strong>
 							</p>
 						</template>
 					</UIContainerContentCard>
@@ -68,7 +70,7 @@ import { LucideFileLock2, LucideHand, LucideMessageSquare, LucidePersonStanding,
 						</template>
 						<template #text>
 							<p>
-								Sentir que l'on n'est pas seul face à ses difficultés est essentiel. Nos groupes vous permettront de rencontrer des personnes qui partagent vos préoccupations, pour un soutien mutuel et des échanges constructifs.
+								Sentir que l'on n'est pas seul face à ses difficultés est essentiel. Nos groupes vous permettront de rencontrer des personnes qui partagent vos préoccupations, pour un soutien mutuel et des <strong>échanges constructifs.</strong>
 							</p>
 						</template>
 					</UIContainerContentCard>
@@ -83,7 +85,7 @@ import { LucideFileLock2, LucideHand, LucideMessageSquare, LucidePersonStanding,
 						</template>
 						<template #text>
 							<p>
-								Apprenez à gérer le stress, l'anxiété, et les émotions difficiles à travers des exercices concrets et des échanges encadrés, afin de retrouver une sérénité durable.
+								Apprenez à gérer le stress, l'anxiété, et les émotions difficiles à travers des <strong>exercices concrets</strong> et des <strong>échanges encadrés,</strong> afin de retrouver une sérénité durable.
 							</p>
 						</template>
 					</UIContainerContentCard>
@@ -99,12 +101,11 @@ import { LucideFileLock2, LucideHand, LucideMessageSquare, LucidePersonStanding,
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-
-		@include gap(24);
+		gap: rem(24);
 
 		& > div {
 			flex: 1;
-			@include prop("min-width", 315);
+			min-width: rem(315);
 		}
 
 		p {
