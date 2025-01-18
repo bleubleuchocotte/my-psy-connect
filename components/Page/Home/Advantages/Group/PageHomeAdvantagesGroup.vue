@@ -3,7 +3,7 @@ const isInViewport = ref(false);
 </script>
 
 <template>
-	<UIIntersectionObserver @is-visible="isInViewport = true">
+	<UIIntersectionObserver @is-visible="isInViewport = $event">
 		<UIContainer direction="row" class="page-home-advantages-group">
 			<PageHomeAdvantagesGroupHeading class="page-home-advantages-group__heading" :viewport="isInViewport" />
 			<PageHomeAdvantagesGroupContent class="page-home-advantages-group__content" :viewport="isInViewport" />

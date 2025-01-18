@@ -6,7 +6,7 @@ const isInViewport = ref(false);
 	<div class="page-home-psychologist-content">
 		<UIBackgroundFixedSVG path="type-1" class="page-home-psychologist-content__background" hide="mobile" />
 
-		<UIIntersectionObserver class="page-home-psychologist-content__cards" @is-visible="isInViewport = true">
+		<UIIntersectionObserver class="page-home-psychologist-content__cards" @is-visible="isInViewport = $event">
 			<PageHomePsychologistContentCard class="page-home-psychologist-content__cards-card" :viewport="isInViewport" position="1">
 				<template #avatar>
 					<NuxtImg preload src="/images/avatar/guenon.png" alt="" loading="lazy" />
