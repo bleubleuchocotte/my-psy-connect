@@ -4,16 +4,25 @@
 			<slot name="avatar" />
 		</div>
 		<div class="container-team-content-card__id">
-			<slot name="name" />
+			<h3>
+				<slot name="name" />
+			</h3>
 			<div class="container-team-content-card__id-job">
-				<slot name="job" />
+				<p>
+					<slot name="job" />
+				</p>
 			</div>
 		</div>
 
 		<div class="container-team-content-card__bar">
-			<slot name="bio" />
+			<p class="p-secondary ">
+				<slot name="bio" />
+			</p>
+
 			<div class="container-team-content-card__bar-link">
-				<slot name="link" />
+				<NuxtLink href="/equipe" class="p">
+					en savoir plus
+				</NuxtLink>
 			</div>
 		</div>
 	</div>
@@ -25,17 +34,17 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: rem(24);
 
 	text-align: center;
 
 	background-color: rgba(255, 255, 255, 0.8);
 	border: 1px solid var(--extra-light-green);
+	border-radius: 10px;
 
 	backdrop-filter: var(--blur);
 
-	@include prop("border-radius", 10);
-	@include gap(24);
-	@include padding(40);
+	padding: rem(40);
 
 	&__avatar {
 		overflow: hidden;
@@ -48,24 +57,32 @@
 	&__id {
 		display: flex;
 		flex-direction: column;
-
-		@include gap(5);
+		gap: rem(5);
 
 		&-job {
 			color: var(--green);
-			@include prop("height", 42);
+			height: rem(42);
 		}
 	}
 
 	&__bar {
 		display: flex;
 		flex-direction: column;
+		gap: rem(10);
 
-		@include gap(10);
+		p {
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 4;
+			color: var(--fake-black);
+		}
 
 		&-link {
-			color: var(--green);
-			text-decoration: underline;
+			a {
+				color: var(--green);
+				text-decoration: underline;
+			}
 		}
 	}
 }

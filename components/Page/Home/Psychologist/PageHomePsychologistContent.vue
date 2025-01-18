@@ -8,24 +8,13 @@
 					<NuxtImg preload src="/images/avatar/guenon.png" alt="" loading="lazy" />
 				</template>
 				<template #name>
-					<h3>
-						Isé Guénon
-					</h3>
+					Isé Guénon
 				</template>
 				<template #job>
-					<p>
-						Psychologue
-					</p>
+					Psychologue
 				</template>
 				<template #bio>
-					<p class="page-home-psychologist-content__card-bio p-secondary ">
-						Psychologue passionnée, reconnue pour son approche innovante et son engagement envers le bien-être mental.
-					</p>
-				</template>
-				<template #link>
-					<NuxtLink href="/equipe">
-						en savoir plus
-					</NuxtLink>
+					Psychologue passionnée, reconnue pour son approche innovante et son engagement envers le bien-être mental.
 				</template>
 			</PageHomePsychologistContentCard>
 		</div>
@@ -56,14 +45,6 @@
 			@media #{$desktop} {
 				max-width: rem(260);
 			}
-		}
-
-		&-bio {
-			overflow: hidden;
-			display: -webkit-box;
-			-webkit-box-orient: vertical;
-			-webkit-line-clamp: 4;
-			color: var(--fake-black);
 		}
 	}
 }
