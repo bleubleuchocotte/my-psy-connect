@@ -39,10 +39,10 @@
 
 	&__avatar {
 		overflow: hidden;
-		aspect-ratio: 1;
 		border-radius: 100%;
 
-		@include prop("width", 80);
+		width: rem(80);
+		height: rem(80);
 	}
 
 	&__id {

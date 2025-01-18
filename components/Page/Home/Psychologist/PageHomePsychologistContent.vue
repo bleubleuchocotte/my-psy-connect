@@ -18,7 +18,7 @@
 					</p>
 				</template>
 				<template #bio>
-					<p class="page-home-psychologist-content__card-bio">
+					<p class="page-home-psychologist-content__card-bio p-secondary ">
 						Psychologue passionnée, reconnue pour son approche innovante et son engagement envers le bien-être mental.
 					</p>
 				</template>
@@ -43,7 +43,12 @@
 		display: flex;
 		justify-content: center;
 
-		@include prop("gap", 24);
+		gap: rem(24);
+
+		img {
+			height: 100%;
+			width: 100%;
+		}
 
 		& > div {
 			flex: 1;
@@ -59,7 +64,6 @@
 			-webkit-box-orient: vertical;
 			-webkit-line-clamp: 4;
 			color: var(--fake-black);
-			@include font("p");
 		}
 	}
 }
