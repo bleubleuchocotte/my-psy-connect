@@ -1,5 +1,19 @@
 <script setup lang="ts">
 import { LucideHandshake, LucideSmilePlus } from "lucide-vue-next";
+
+useSeoMeta({
+	// Flat
+	title: "MyPsy - Nos partenaires pour le bien-être mental",
+	description: "Découvrez nos partenaires institutionnels et professionnels qui soutiennent MyPsy dans sa mission d'accompagnement et de prévention du burn-out au travail.",
+
+	// OG
+	ogTitle: "MyPsy - Nos partenaires pour le bien-être mental",
+	ogDescription: "Découvrez nos partenaires institutionnels et professionnels qui soutiennent MyPsy dans sa mission d'accompagnement et de prévention du burn-out au travail.",
+
+	// Twitter
+	twitterTitle: "MyPsy - Nos partenaires pour le bien-être mental",
+	twitterDescription: "Découvrez nos partenaires institutionnels et professionnels qui soutiennent MyPsy dans sa mission d'accompagnement et de prévention du burn-out au travail.",
+});
 </script>
 
 <template>

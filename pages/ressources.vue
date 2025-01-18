@@ -1,5 +1,19 @@
 <script setup lang="ts">
 import { LucideLightbulb, LucideNewspaper } from "lucide-vue-next";
+
+useSeoMeta({
+	// Flat
+	title: "Ressources MyPsy - Guides, Tests et Articles sur le Burn-Out",
+	description: "Explorez nos ressources dédiées : guides pratiques, tests d'auto-évaluation et articles pour mieux comprendre et prévenir le burn-out au travail.",
+
+	// OG
+	ogTitle: "Ressources MyPsy - Guides, Tests et Articles sur le Burn-Out",
+	ogDescription: "Explorez nos ressources dédiées : guides pratiques, tests d'auto-évaluation et articles pour mieux comprendre et prévenir le burn-out au travail.",
+
+	// Twitter
+	twitterTitle: "Ressources MyPsy - Guides, Tests et Articles sur le Burn-Out",
+	twitterDescription: "Explorez nos ressources dédiées : guides pratiques, tests d'auto-évaluation et articles pour mieux comprendre et prévenir le burn-out au travail.",
+});
 </script>
 
 <template>

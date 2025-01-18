@@ -7,7 +7,10 @@
 
 <style scoped lang="scss">
 .page-home-hero {
-	padding-top: rem(200);
 	background-color: var(--beige);
+
+	@media #{$desktop} {
+		padding-top: rem(200) !important;
+	}
 }
 </style>

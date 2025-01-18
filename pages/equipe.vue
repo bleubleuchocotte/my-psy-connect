@@ -1,5 +1,19 @@
 <script setup lang="ts">
 import { LucideMessagesSquare, LucideUsers2 } from "lucide-vue-next";
+
+useSeoMeta({
+	// Flat
+	title: "MyPsy - Nos psychologues expérimentés, engagés et passionnés",
+	description: "Rencontrez nos psychologues MyPsy : des experts reconnus pour leur passion et leur engagement, offrant un accompagnement personnalisé et adapté.",
+
+	// OG
+	ogTitle: "MyPsy - Nos psychologues expérimentés, engagés et passionnés",
+	ogDescription: "Rencontrez nos psychologues MyPsy : des experts reconnus pour leur passion et leur engagement, offrant un accompagnement personnalisé et adapté.",
+
+	// Twitter
+	twitterTitle: "MyPsy - Nos psychologues expérimentés, engagés et passionnés",
+	twitterDescription: "Rencontrez nos psychologues MyPsy : des experts reconnus pour leur passion et leur engagement, offrant un accompagnement personnalisé et adapté.",
+});
 </script>
 
 <template>

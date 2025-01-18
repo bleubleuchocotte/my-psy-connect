@@ -1,5 +1,19 @@
 <script setup lang="ts">
 import { LucideHeadset } from "lucide-vue-next";
+
+useSeoMeta({
+	// Flat
+	title: "MyPsy - Services de bien-être au travail : groupes et séances",
+	description: "Découvrez les services de MyPsy : séances individuelles, groupes de soutien et webinaires interactifs pour améliorer votre bien-être mental et prévenir le burn-out.",
+
+	// OG
+	ogTitle: "MyPsy - Services de bien-être au travail : groupes et séances",
+	ogDescription: "Découvrez les services de MyPsy : séances individuelles, groupes de soutien et webinaires interactifs pour améliorer votre bien-être mental et prévenir le burn-out.",
+
+	// Twitter
+	twitterTitle: "MyPsy - Services de bien-être au travail : groupes et séances",
+	twitterDescription: "Découvrez les services de MyPsy : séances individuelles, groupes de soutien et webinaires interactifs pour améliorer votre bien-être mental et prévenir le burn-out.",
+});
 </script>
 
 <template>

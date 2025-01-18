@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { LucideArrowUpRight } from "lucide-vue-next";
+
+const isDesktop = useMediaQuery("(min-width: 1024px)", { ssrWidth: 768 });
 </script>
 
 <template>
 	<div class="page-home-trust-content">
 		<NuxtMarquee class="page-home-trust-content__marquee" :auto-fill="true" hide="mobile" tabindex="-1">
 			<div class="page-home-trust-content__marquee-item">
-				<IconPartnerLaFrenchTech />
+				<IconPartnerLaFrenchTech v-if="isDesktop" />
 				<IconPartnerAgefiph />
 				<IconPartnerCCI />
 			</div>

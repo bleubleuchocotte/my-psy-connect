@@ -10,7 +10,7 @@
 			Partenaires
 		</UILink>
 		<UILink to="/equipe">
-			Notre Équipe
+			Nos psychologues
 		</UILink>
 		<UILink to="/ressources">
 			Ressources
@@ -23,19 +23,23 @@
 
 <style scoped lang="scss">
 .navigation-bar {
+	width: rem(660);
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	gap: rem(30);
+
+	padding-block: rem(17);
+
 	backdrop-filter: var(--blur);
 	background-color: rgba(255, 255, 255, 0.7);
 
 	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-radius: 30px;
 
-	@include prop("width", 660);
-
-	@include prop("padding-block", 17);
-
-	@include prop("gap", 30);
-	@include prop("border-radius", 30);
+	a {
+		@include font("p");
+	}
 }
 </style>
