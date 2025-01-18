@@ -41,7 +41,6 @@ watch(number, handleSubmit);
 			initialCountry: 'fr',
 		}"
 		class="reset-ua"
-		required
 		:disabled
 		name="phone"
 		@change-number="number = $event"

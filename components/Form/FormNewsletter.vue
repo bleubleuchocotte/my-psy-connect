@@ -49,7 +49,7 @@ const onSubmit: (_: Event) => void = async (e: Event) => {
 		<FormNewsletterInputs :disabled="state === 'success' || request === 'pending'" />
 
 		<div class="form-newsletter__consent">
-			<input id="consent" type="checkbox" name="consent" required :disabled="state === 'success' || request === 'pending'">
+			<input id="consent" type="checkbox" name="consent" :disabled="state === 'success' || request === 'pending'">
 			<label for="consent" class="p-secondary" :disabled="state === 'success' || request === 'pending'">
 				Oui, je consens à recevoir des communications par email et/ou SMS de la part de MyPsy concernant les actualités, services et événements.
 			</label>
