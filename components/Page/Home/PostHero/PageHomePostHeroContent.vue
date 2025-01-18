@@ -5,7 +5,7 @@ const isInViewport = ref(false);
 </script>
 
 <template>
-	<UIIntersectionObserver class="page-home-post-hero-content" @is-visible="isInViewport = true">
+	<UIIntersectionObserver class="page-home-post-hero-content" @is-visible="isInViewport = $event">
 		<UIContainerContentCard :blur="true" class="page-home-post-hero-content__card" :viewport="isInViewport" position="1">
 			<template #icon>
 				<LucideLaugh stroke="var(--green)" stroke-width="2" />
