@@ -1,5 +1,19 @@
 <script setup lang="ts">
 import { LucideInfo, LucideQuote } from "lucide-vue-next";
+
+useSeoMeta({
+	// Flat
+	title: "MyPsy - Une histoire inspirante pour un bien-être collectif",
+	description: "Découvrez l'origine de MyPsy : un projet né d'une passion pour la psychologie, avec une mission de soutien collectif et des actions concrètes pour le bien-être mental.",
+
+	// OG
+	ogTitle: "MyPsy - Une histoire inspirante pour un bien-être collectif",
+	ogDescription: "Découvrez l'origine de MyPsy : un projet né d'une passion pour la psychologie, avec une mission de soutien collectif et des actions concrètes pour le bien-être mental.",
+
+	// Twitter
+	twitterTitle: "MyPsy - Une histoire inspirante pour un bien-être collectif",
+	twitterDescription: "Découvrez l'origine de MyPsy : un projet né d'une passion pour la psychologie, avec une mission de soutien collectif et des actions concrètes pour le bien-être mental.",
+});
 </script>
 
 <template>

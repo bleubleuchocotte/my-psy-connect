@@ -3,14 +3,17 @@ const { origin } = useRequestURL();
 
 const isDark = usePreferredDark();
 
-updateSiteConfig({
-	name: "MyPsyConnect",
-	url: origin,
-});
+if (import.meta.server) {
+	updateSiteConfig({
+		name: "MyPsyConnect",
+		url: origin,
+	});
+}
 
 useHead({
 	// Toutes les options seront incluses dans toutes les pages
 	title: "MyPsyConnect",
+	titleTemplate: "%s",
 	htmlAttrs: {
 		lang: "fr",
 	},
@@ -25,28 +28,28 @@ useHead({
 
 useSeoMeta({
 	// Flat
-	title: "MyPsyConnect",
-	description: "",
-	applicationName: "",
-	themeColor: "",
+	title: "MyPsy - Soutien mental et bien-être au travail",
+	description: "Découvrez MyPsy : séances individuelles, groupes de soutien et webinaires dédiés au bien-être mental et à la gestion du burn-out.",
+	applicationName: "MyPsyConnect",
+	themeColor: "#F1F0E9", // var(--beige)
 	creator: "Bleubleu chocotte",
 	charset: "utf-8",
 	viewport: "width=device-width, initial-scale=1.0",
 
 	// OG
-	ogUrl: "",
+	ogUrl: origin,
 	ogType: "website",
-	ogLocale: "",
-	ogTitle: "",
-	ogDescription: "",
+	ogLocale: "fr",
+	ogTitle: "MyPsy - Soutien mental et bien-être au travail",
+	ogDescription: "Découvrez MyPsy : séances individuelles, groupes de soutien et webinaires dédiés au bien-être mental et à la gestion du burn-out.",
 	ogImage: {
 		url: `${origin}/images/og-image.png`, // Must be an absolute path,
 		type: "image/png",
 	},
 
 	// Twitter
-	twitterTitle: "",
-	twitterDescription: "",
+	twitterTitle: "MyPsy - Soutien mental et bien-être au travail",
+	twitterDescription: "Découvrez MyPsy : séances individuelles, groupes de soutien et webinaires dédiés au bien-être mental et à la gestion du burn-out.",
 	twitterImage: {
 		url: `${origin}/images/og-image.png`, // Must be an absolute path,
 		type: "image/png",
