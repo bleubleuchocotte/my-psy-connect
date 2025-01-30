@@ -47,6 +47,7 @@ const accordionState = computed(() => {
 
 	&__content {
 		color: var(--fake-black);
+		white-space: break-spaces;
 
 		@include font("p");
 		@include prop("padding", 24);

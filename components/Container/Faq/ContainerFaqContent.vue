@@ -2,35 +2,35 @@
 const questions = [
 	{
 		title: "Quels sont les prix des séances ?",
-		content: "Un psychologue est titulaire d'un diplôme d'État en psychologie. Un psychothérapeute est formé à des méthodes spécifiques de thérapie (EMDR, TCC, CNV, hypnothérapie…). Un psychanalyste est formé en psychanalyse, souvent selon l'approche freudienne ou lacanienne. MyPsy propose des professionnels certifiés dans chaque domaine pour répondre à vos besoins.",
+		content: "Les tarifs varient en fonction du praticien et de la durée des séances. Les prix sont clairement affichés sur chaque profil de psychologue.",
 	},
 	{
-		title: "Quels sont les prix des séances ?",
-		content: "Un psychologue est titulaire d'un diplôme d'État en psychologie. Un psychothérapeute est formé à des méthodes spécifiques de thérapie (EMDR, TCC, CNV, hypnothérapie…). Un psychanalyste est formé en psychanalyse, souvent selon l'approche freudienne ou lacanienne. MyPsy propose des professionnels certifiés dans chaque domaine pour répondre à vos besoins.",
+		title: "Quelle est la différence entre un psychologue, un psychothérapeute, et un psychanalyste ?",
+		content: "Un psychologue est titulaire d’un diplôme d'État en psychologie. Un psychothérapeute est formé à des méthodes spécifiques de thérapie (EMDR, TCC, CNV, hypnothérapie…). Un psychanalyste est formé en psychanalyse, souvent selon l’approche freudienne ou lacanienne. MyPsy propose des professionnels certifiés dans chaque domaine pour répondre à vos besoins.",
 	},
 	{
-		title: "Quels sont les prix des séances ?",
-		content: "Un psychologue est titulaire d'un diplôme d'État en psychologie. Un psychothérapeute est formé à des méthodes spécifiques de thérapie (EMDR, TCC, CNV, hypnothérapie…). Un psychanalyste est formé en psychanalyse, souvent selon l'approche freudienne ou lacanienne. MyPsy propose des professionnels certifiés dans chaque domaine pour répondre à vos besoins.",
+		title: "Qu'est-ce que MyPsy et à qui s'adresse ceVe plateforme ?",
+		content: "MyPsy est une plateforme dédiée au soutien psychologique, spécialement conçue pour les cadres,responsables, et employés confrontés au stress, au burnout, et à la souffrance au travail. Notre objectif est de vous accompagner vers un meilleur équilibre mental grâce à des solutions adaptées à vos besoins professionnels.",
 	},
 	{
-		title: "Quels sont les prix des séances ?",
-		content: "Un psychologue est titulaire d'un diplôme d'État en psychologie. Un psychothérapeute est formé à des méthodes spécifiques de thérapie (EMDR, TCC, CNV, hypnothérapie…). Un psychanalyste est formé en psychanalyse, souvent selon l'approche freudienne ou lacanienne. MyPsy propose des professionnels certifiés dans chaque domaine pour répondre à vos besoins.",
+		title: "Quelles sont les principales fonc)onnalités proposées par MyPsy ?",
+		content: "MyPsy offrira des séances de groupe en ligne mais aussi des consultations individuelles, toutes encadrées par des psychologues ou psychothérapeutes qualifiés. Les utilisateurs pourront également bénéficier d'une assistance juridique pour les problèmes liés au harcèlement au travail.",
 	},
 	{
-		title: "Quels sont les prix des séances ?",
-		content: "Un psychologue est titulaire d'un diplôme d'État en psychologie. Un psychothérapeute est formé à des méthodes spécifiques de thérapie (EMDR, TCC, CNV, hypnothérapie…). Un psychanalyste est formé en psychanalyse, souvent selon l'approche freudienne ou lacanienne. MyPsy propose des professionnels certifiés dans chaque domaine pour répondre à vos besoins.",
+		title: "Quand MyPsy sera-t-il opérationnel ?",
+		content: "Le site MyPsy est actuellement en phase de présentation et de développement. Nous travaillons activement pour lancer la plateforme opérationnelle prochainement. Inscrivez-vous à notre newsletter pour être informé dès que MyPsy sera disponible.",
 	},
 	{
-		title: "Quels sont les prix des séances ?",
-		content: "Un psychologue est titulaire d'un diplôme d'État en psychologie. Un psychothérapeute est formé à des méthodes spécifiques de thérapie (EMDR, TCC, CNV, hypnothérapie…). Un psychanalyste est formé en psychanalyse, souvent selon l'approche freudienne ou lacanienne. MyPsy propose des professionnels certifiés dans chaque domaine pour répondre à vos besoins.",
+		title: "Comment puis-je rester informé des avancées de MyPsy ?",
+		content: "Vous pouvez rester informé en vous inscrivant à notre newsletter. Vous recevrez des mises à jour régulières sur le lancement de la plateforme, les nouvelles foncConnalités, et des conseils sur le bien-être mental.",
 	},
 	{
-		title: "Quels sont les prix des séances ?",
-		content: "Un psychologue est titulaire d'un diplôme d'État en psychologie. Un psychothérapeute est formé à des méthodes spécifiques de thérapie (EMDR, TCC, CNV, hypnothérapie…). Un psychanalyste est formé en psychanalyse, souvent selon l'approche freudienne ou lacanienne. MyPsy propose des professionnels certifiés dans chaque domaine pour répondre à vos besoins.",
+		title: "Comment savoir si je suis proche d’un burn-out ?",
+		content: "Vous pouvez faire le test en ligne proposé par ANAPREV, expert de la souffrance au travail et des conditions de travail auprès des CSE, certifié Qualianor.\nhttps://www.souffrance-et-travail.com/travailleurs/auto-evaluation-epuisement-professionnel/",
 	},
 	{
-		title: "Quels sont les prix des séances ?",
-		content: "Un psychologue est titulaire d'un diplôme d'État en psychologie. Un psychothérapeute est formé à des méthodes spécifiques de thérapie (EMDR, TCC, CNV, hypnothérapie…). Un psychanalyste est formé en psychanalyse, souvent selon l'approche freudienne ou lacanienne. MyPsy propose des professionnels certifiés dans chaque domaine pour répondre à vos besoins.",
+		title: "Comment puis-je savoir si MyPsy est fait pour moi ?",
+		content: "MyPsy s'adresse à toute personne qui ressent le besoin d'un soutien psychologique face aux défis du monde professionnel. Que vous soyez en pleine phase de burnout, que vous cherchiez à prévenir le stress, ou que vous ayez besoin d'un accompagnement juridique, MyPsy sera là pour vous offrir des solutions adaptées. N'hésitez pas à vous inscrire à notre newsletter pour en savoir plus et découvrir si MyPsy répond à vos besoins.",
 	},
 ];
 </script>
