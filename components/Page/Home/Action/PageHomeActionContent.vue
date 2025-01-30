@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { LucideFileLock2, LucideHand, LucideMessageSquare, LucidePersonStanding, LucideSpeech } from "lucide-vue-next";
+
+const isInViewport = ref(false);
 </script>
 
 <template>
@@ -11,8 +13,8 @@ import { LucideFileLock2, LucideHand, LucideMessageSquare, LucidePersonStanding,
 			<div class="page-home-action">
 				<UIBackgroundFixedSVG class="page-home-action__background" path="type-2" hide="mobile" />
 
-				<div class="page-home-action__cards">
-					<UIContainerContentCard :blur="true">
+				<UIIntersectionObserver class="page-home-action__cards" @is-visible="isInViewport = $event">
+					<UIContainerContentCard :blur="true" :viewport="isInViewport" position="1" animation="fade-in-translate-in-from-bottom">
 						<template #icon>
 							<LucideSpeech stroke="var(--green)" stroke-width="2" />
 						</template>
@@ -27,7 +29,7 @@ import { LucideFileLock2, LucideHand, LucideMessageSquare, LucidePersonStanding,
 							</p>
 						</template>
 					</UIContainerContentCard>
-					<UIContainerContentCard :blur="true">
+					<UIContainerContentCard :blur="true" :viewport="isInViewport" position="2" animation="fade-in-translate-in-from-bottom">
 						<template #icon>
 							<LucideHand stroke="var(--green)" stroke-width="2" />
 						</template>
@@ -43,7 +45,7 @@ import { LucideFileLock2, LucideHand, LucideMessageSquare, LucidePersonStanding,
 							</p>
 						</template>
 					</UIContainerContentCard>
-					<UIContainerContentCard :blur="true">
+					<UIContainerContentCard :blur="true" :viewport="isInViewport" position="3" animation="fade-in-translate-in-from-bottom">
 						<template #icon>
 							<LucideFileLock2 stroke="var(--green)" stroke-width="2" />
 						</template>
@@ -59,7 +61,7 @@ import { LucideFileLock2, LucideHand, LucideMessageSquare, LucidePersonStanding,
 							</p>
 						</template>
 					</UIContainerContentCard>
-					<UIContainerContentCard :blur="true">
+					<UIContainerContentCard :blur="true" :viewport="isInViewport" position="4" animation="fade-in-translate-in-from-bottom">
 						<template #icon>
 							<LucideMessageSquare stroke="var(--green)" stroke-width="2" />
 						</template>
@@ -74,7 +76,7 @@ import { LucideFileLock2, LucideHand, LucideMessageSquare, LucidePersonStanding,
 							</p>
 						</template>
 					</UIContainerContentCard>
-					<UIContainerContentCard :blur="true">
+					<UIContainerContentCard :blur="true" :viewport="isInViewport" position="5" animation="fade-in-translate-in-from-bottom">
 						<template #icon>
 							<LucidePersonStanding stroke="var(--green)" stroke-width="2" />
 						</template>
@@ -89,7 +91,7 @@ import { LucideFileLock2, LucideHand, LucideMessageSquare, LucidePersonStanding,
 							</p>
 						</template>
 					</UIContainerContentCard>
-				</div>
+				</UIIntersectionObserver>
 			</div>
 		</template>
 	</UIContainerContent>

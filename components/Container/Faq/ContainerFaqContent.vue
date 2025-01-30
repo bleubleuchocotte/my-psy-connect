@@ -33,13 +33,15 @@ const questions = [
 		content: "MyPsy s'adresse à toute personne qui ressent le besoin d'un soutien psychologique face aux défis du monde professionnel. Que vous soyez en pleine phase de burnout, que vous cherchiez à prévenir le stress, ou que vous ayez besoin d'un accompagnement juridique, MyPsy sera là pour vous offrir des solutions adaptées. N'hésitez pas à vous inscrire à notre newsletter pour en savoir plus et découvrir si MyPsy répond à vos besoins.",
 	},
 ];
+
+const isInViewport = ref(false);
 </script>
 
 <template>
 	<UIContainerContent class="container-faq-content">
 		<template #content>
-			<div class="container-faq-content__content">
-				<ContainerFaqContentItem v-for="(item) in questions" :key="item.title">
+			<UIIntersectionObserver class="container-faq-content__content" @is-visible="isInViewport = $event">
+				<ContainerFaqContentItem v-for="(item, index) in questions" :key="item.title" :position="index + 1" animation="fade-in-translate-in-from-bottom" :viewport="isInViewport">
 					<template #title>
 						{{ item.title }}
 					</template>
@@ -47,7 +49,7 @@ const questions = [
 						{{ item.content }}
 					</template>
 				</ContainerFaqContentItem>
-			</div>
+			</UIIntersectionObserver>
 		</template>
 	</UIContainerContent>
 </template>

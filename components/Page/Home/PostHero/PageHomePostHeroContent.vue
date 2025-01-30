@@ -6,7 +6,7 @@ const isInViewport = ref(false);
 
 <template>
 	<UIIntersectionObserver class="page-home-post-hero-content" @is-visible="isInViewport = $event">
-		<UIContainerContentCard :blur="true" class="page-home-post-hero-content__card" :viewport="isInViewport" position="1">
+		<UIContainerContentCard :blur="true" class="page-home-post-hero-content__card" :viewport="isInViewport" position="1" animation="fade-in-translate-in-from-bottom">
 			<template #icon>
 				<LucideLaugh stroke="var(--green)" stroke-width="2" />
 			</template>
@@ -17,7 +17,7 @@ const isInViewport = ref(false);
 				<p>Vous aspirez à vous reconnecter à vos valeurs et à redonner un sens à votre travail.</p>
 			</template>
 		</UIContainerContentCard>
-		<UIContainerContentCard :blur="true" class="page-home-post-hero-content__card" :viewport="isInViewport" position="2">
+		<UIContainerContentCard :blur="true" class="page-home-post-hero-content__card" :viewport="isInViewport" position="2" animation="fade-in-translate-in-from-bottom">
 			<template #icon>
 				<LucideBrain stroke="var(--green)" stroke-width="2" />
 			</template>
@@ -28,7 +28,7 @@ const isInViewport = ref(false);
 				<p>Vous cherchez des moyens concrets pour apaiser votre épuisement et retrouver de l'énergie.</p>
 			</template>
 		</UIContainerContentCard>
-		<UIContainerContentCard :blur="true" class="page-home-post-hero-content__card" :viewport="isInViewport" position="3">
+		<UIContainerContentCard :blur="true" class="page-home-post-hero-content__card" :viewport="isInViewport" position="3" animation="fade-in-translate-in-from-bottom">
 			<template #icon>
 				<LucideMessageSquare stroke="var(--green)" stroke-width="2" />
 			</template>
@@ -39,7 +39,7 @@ const isInViewport = ref(false);
 				<p>Vous souhaitez briser la solitude et trouver un soutien humain et bienveillant.</p>
 			</template>
 		</UIContainerContentCard>
-		<UIContainerContentCard :blur="true" class="page-home-post-hero-content__card" :viewport="isInViewport" position="4">
+		<UIContainerContentCard :blur="true" class="page-home-post-hero-content__card" :viewport="isInViewport" position="4" animation="fade-in-translate-in-from-bottom">
 			<template #icon>
 				<LucideHeartHandshake stroke="var(--green)" stroke-width="2" />
 			</template>
@@ -66,30 +66,6 @@ const isInViewport = ref(false);
 
 	&__card {
 		flex: 1;
-
-		--position: 1;
-		&[position="2"] {
-			--position: 2;
-		}
-		&[position="3"] {
-			--position: 3;
-		}
-		&[position="4"] {
-			--position: 4;
-		}
-
-		transition:
-			opacity linear 0.4s 0.2s,
-			transform ease-out 0.4s calc(0.1s * var(--position));
-
-		&[viewport="false"] {
-			opacity: 0;
-			transform: translateY(50px);
-		}
-		&[viewport="true"] {
-			opacity: 1;
-			transform: translateY(0px);
-		}
 
 		p {
 			@include font("p");
