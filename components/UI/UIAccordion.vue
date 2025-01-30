@@ -106,6 +106,8 @@ function updateHeight() {
 
 		border-radius: 10px 10px 0 0;
 
+		max-height: none;
+
 		@include padding(10, !important);
 		@include prop("padding-left", 24, !important);
 	}
