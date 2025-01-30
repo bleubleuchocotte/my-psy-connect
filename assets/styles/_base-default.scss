@@ -136,7 +136,7 @@ main.page {
 	}
 
 	transition:
-		opacity linear 0.4s 0.2s,
+		opacity linear 0.4s calc(0.1s * var(--position)),
 		transform ease-out 0.4s calc(0.1s * var(--position));
 
 	&[viewport="false"] {
@@ -151,8 +151,8 @@ main.page {
 
 [animation="fade-in-translate-in-from-left"] {
 	transition:
-		opacity linear 0.4s 0.3s,
-		transform ease-out 0.4s 0.3s;
+		opacity linear 0.4s 0.4s,
+		transform ease-out 0.4s 0.4s;
 
 	&[viewport="false"] {
 		opacity: 0;
