@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { LucideGoal, LucidePersonStanding, LucideShieldCheck, LucideSpeech } from "lucide-vue-next";
+
+const isInViewport = ref(false);
 </script>
 
 <template>
@@ -22,8 +24,8 @@ import { LucideGoal, LucidePersonStanding, LucideShieldCheck, LucideSpeech } fro
 		<div class="page-services-webinaires__end">
 			<h3>Chaque webinaire explore des sujets clés tels que</h3>
 
-			<div class="page-services-webinaires__end-cards">
-				<UIContainerContentCard blur>
+			<UIIntersectionObserver class="page-services-webinaires__end-cards" @is-visible="isInViewport = $event">
+				<UIContainerContentCard blur :viewport="isInViewport" position="1" animation="fade-in-translate-in-from-bottom">
 					<template #icon>
 						<LucideGoal stroke="var(--dark-blue)" stroke-width="2" />
 					</template>
@@ -33,7 +35,7 @@ import { LucideGoal, LucidePersonStanding, LucideShieldCheck, LucideSpeech } fro
 						</h4>
 					</template>
 				</UIContainerContentCard>
-				<UIContainerContentCard blur>
+				<UIContainerContentCard blur :viewport="isInViewport" position="2" animation="fade-in-translate-in-from-bottom">
 					<template #icon>
 						<LucideShieldCheck stroke="var(--dark-blue)" stroke-width="2" />
 					</template>
@@ -43,7 +45,7 @@ import { LucideGoal, LucidePersonStanding, LucideShieldCheck, LucideSpeech } fro
 						</h4>
 					</template>
 				</UIContainerContentCard>
-				<UIContainerContentCard blur>
+				<UIContainerContentCard blur :viewport="isInViewport" position="3" animation="fade-in-translate-in-from-bottom">
 					<template #icon>
 						<LucideSpeech stroke="var(--dark-blue)" stroke-width="2" />
 					</template>
@@ -53,7 +55,7 @@ import { LucideGoal, LucidePersonStanding, LucideShieldCheck, LucideSpeech } fro
 						</h4>
 					</template>
 				</UIContainerContentCard>
-				<UIContainerContentCard blur>
+				<UIContainerContentCard blur :viewport="isInViewport" position="4" animation="fade-in-translate-in-from-bottom">
 					<template #icon>
 						<LucidePersonStanding stroke="var(--dark-blue)" stroke-width="2" />
 					</template>
@@ -63,7 +65,7 @@ import { LucideGoal, LucidePersonStanding, LucideShieldCheck, LucideSpeech } fro
 						</h4>
 					</template>
 				</UIContainerContentCard>
-			</div>
+			</UIIntersectionObserver>
 		</div>
 	</section>
 </template>

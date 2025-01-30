@@ -34,6 +34,7 @@ const accordionState = computed(() => {
 <style scoped lang="scss">
 .container-faq-content-item {
 	background-color: var(--beige);
+	text-wrap: balance;
 
 	@include prop("border-radius", 10);
 
@@ -41,12 +42,18 @@ const accordionState = computed(() => {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		gap: rem(10);
 
 		width: 100%;
+
+		svg {
+			flex-shrink: 0;
+		}
 	}
 
 	&__content {
 		color: var(--fake-black);
+		white-space: break-spaces;
 
 		@include font("p");
 		@include prop("padding", 24);

@@ -127,3 +127,53 @@ main.page {
 	flex-direction: column;
 	gap: rem(24);
 }
+
+[animation="fade-in-translate-in-from-bottom"] {
+	@for $i from 1 through 10 {
+		&[position="#{$i}"] {
+			--position: #{$i};
+		}
+	}
+
+	transition:
+		opacity linear 0.4s 0.2s,
+		transform ease-out 0.4s calc(0.1s * var(--position));
+
+	&[viewport="false"] {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	&[viewport="true"] {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+[animation="fade-in-translate-in-from-left"] {
+	transition:
+		opacity linear 0.4s 0.3s,
+		transform ease-out 0.4s 0.3s;
+
+	&[viewport="false"] {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+	&[viewport="true"] {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+[animation="fade-in-translate-in-from-right"] {
+	transition:
+		opacity linear 0.4s 0.3s,
+		transform ease-out 0.4s 0.3s;
+
+	&[viewport="false"] {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	&[viewport="true"] {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}

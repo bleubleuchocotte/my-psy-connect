@@ -7,7 +7,7 @@ const isInViewport = ref(false);
 		<UIBackgroundFixedSVG path="type-1" class="page-home-psychologist-content__background" hide="mobile" />
 
 		<UIIntersectionObserver class="page-home-psychologist-content__cards" @is-visible="isInViewport = $event">
-			<PageHomePsychologistContentCard class="page-home-psychologist-content__cards-card" :viewport="isInViewport" position="1">
+			<PageHomePsychologistContentCard class="page-home-psychologist-content__cards-card" :viewport="isInViewport" position="1" animation="fade-in-translate-in-from-bottom">
 				<template #avatar>
 					<NuxtImg preload src="/images/avatar/guenon.png" alt="" loading="lazy" />
 				</template>
@@ -39,30 +39,6 @@ const isInViewport = ref(false);
 		gap: rem(24);
 
 		&-card {
-			--position: 1;
-			&[position="2"] {
-				--position: 2;
-			}
-			&[position="3"] {
-				--position: 3;
-			}
-			&[position="4"] {
-				--position: 4;
-			}
-
-			transition:
-				opacity linear 0.4s 0.2s,
-				transform ease-out 0.4s calc(0.1s * var(--position));
-
-			&[viewport="false"] {
-				opacity: 0;
-				transform: translateY(50px);
-			}
-			&[viewport="true"] {
-				opacity: 1;
-				transform: translateY(0px);
-			}
-
 			flex: 1;
 
 			@media #{$desktop} {

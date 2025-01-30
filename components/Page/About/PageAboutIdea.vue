@@ -115,6 +115,11 @@
 			}
 
 			img {
+				max-height: rem(150);
+				max-width: rem(150);
+
+				flex-shrink: 0;
+				flex: 1;
 				border-radius: 10px;
 			}
 

@@ -3,7 +3,7 @@
 		<div class="footer__top">
 			<div class="footer__top-left">
 				<FooterControls />
-				<FooterSocials />
+				<FooterSocials v-if="false" />
 			</div>
 			<FooterLegalLinks />
 		</div>

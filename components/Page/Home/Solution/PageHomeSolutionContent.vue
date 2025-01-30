@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { LucideCross, LucideHandCoins, LucideIdCard, LucideLaugh, LucideLock } from "lucide-vue-next";
+
+const isInViewport = ref(false);
 </script>
 
 <template>
-	<div class="page-home-solution-content">
-		<UIContainerContentCard>
+	<UIIntersectionObserver class="page-home-solution-content" @is-visible="isInViewport = $event">
+		<UIContainerContentCard position="1" animation="fade-in-translate-in-from-bottom" :viewport="isInViewport">
 			<template #icon>
 				<LucideLaugh stroke="var(--green)" stroke-width="2" />
 			</template>
@@ -20,7 +22,7 @@ import { LucideCross, LucideHandCoins, LucideIdCard, LucideLaugh, LucideLock } f
 				</p>
 			</template>
 		</UIContainerContentCard>
-		<UIContainerContentCard>
+		<UIContainerContentCard position="2" animation="fade-in-translate-in-from-bottom" :viewport="isInViewport">
 			<template #icon>
 				<LucideLock stroke="var(--green)" stroke-width="2" />
 			</template>
@@ -35,7 +37,7 @@ import { LucideCross, LucideHandCoins, LucideIdCard, LucideLaugh, LucideLock } f
 				</p>
 			</template>
 		</UIContainerContentCard>
-		<UIContainerContentCard>
+		<UIContainerContentCard position="3" animation="fade-in-translate-in-from-bottom" :viewport="isInViewport">
 			<template #icon>
 				<LucideIdCard stroke="var(--green)" stroke-width="2" />
 			</template>
@@ -50,7 +52,7 @@ import { LucideCross, LucideHandCoins, LucideIdCard, LucideLaugh, LucideLock } f
 				</p>
 			</template>
 		</UIContainerContentCard>
-		<UIContainerContentCard>
+		<UIContainerContentCard position="4" animation="fade-in-translate-in-from-bottom" :viewport="isInViewport">
 			<template #icon>
 				<LucideCross stroke="var(--green)" stroke-width="2" />
 			</template>
@@ -65,7 +67,7 @@ import { LucideCross, LucideHandCoins, LucideIdCard, LucideLaugh, LucideLock } f
 				</p>
 			</template>
 		</UIContainerContentCard>
-		<UIContainerContentCard>
+		<UIContainerContentCard position="5" animation="fade-in-translate-in-from-bottom" :viewport="isInViewport">
 			<template #icon>
 				<LucideHandCoins stroke="var(--green)" stroke-width="2" />
 			</template>
@@ -81,7 +83,7 @@ import { LucideCross, LucideHandCoins, LucideIdCard, LucideLaugh, LucideLock } f
 				</p>
 			</template>
 		</UIContainerContentCard>
-	</div>
+	</UIIntersectionObserver>
 </template>
 
 <style scoped lang="scss">
