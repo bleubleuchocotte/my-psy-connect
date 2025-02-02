@@ -57,7 +57,7 @@ useSeoMeta({
 				expertise, quel que soit leur lieu de résidence.
 			</template>
 			<template #cta>
-				<NuxtLink href="https://www.doctolib.fr/psychologue/fontanes/ise-guenon" class="reset-ua page-team__link">
+				<NuxtLink href="https://www.doctolib.fr/psychologue/fontanes/ise-guenon" class="reset-ua page-team__link button" hover="border-green">
 					Doctolib <IconDoctolib />
 				</NuxtLink>
 			</template>
@@ -77,21 +77,8 @@ useSeoMeta({
 	gap: rem(24);
 
 	&__link {
-		width: fit-content;
-
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: rem(10);
-
 		background-color: var(--beige);
 		color: var(--dark-blue);
-
-		padding-inline: rem(25);
-		height: rem(54);
-
-		border-radius: 50px;
-		@include font("cta");
 	}
 }
 </style>

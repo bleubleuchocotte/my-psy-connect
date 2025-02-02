@@ -95,6 +95,8 @@ a.reset-ua {
 }
 
 a.button {
+	transition: box-shadow ease-out 0.2s;
+
 	width: fit-content;
 
 	display: flex;
@@ -108,6 +110,38 @@ a.button {
 	border-radius: 50px;
 
 	@include font("cta");
+
+	&:hover {
+		&[hover="green"] {
+			background-color: var(--green);
+			box-shadow: 0 4px 0 -1px var(--dark-blue);
+		}
+		&[hover="border-green"] {
+			box-shadow: 0 4px 0 -1px var(--green);
+		}
+
+		&[hover="transparent"] {
+			background-color: transparent;
+			color: var(--beige);
+			box-shadow: 0 0 0 2px var(--beige);
+		}
+		&[hover="transparent-dark-blue"] {
+			background-color: transparent;
+			color: var(--dark-blue);
+			box-shadow: 0 0 0 2px var(--dark-blue);
+		}
+		&[hover="dark-blue"] {
+			background-color: var(--dark-blue);
+			color: var(--white);
+			border-color: var(--dark-blue);
+			box-shadow: unset;
+		}
+		&[hover="dark-blue-border"] {
+			background-color: var(--dark-blue);
+			color: var(--white);
+			box-shadow: 0 4px 0 -1px var(--green);
+		}
+	}
 }
 
 section.container {

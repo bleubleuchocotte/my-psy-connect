@@ -33,6 +33,7 @@ const props = withDefaults(defineProps<ButtonHTMLAttributes & ComponentProps>(),
 <style scoped lang="scss">
 .ui-button {
 	cursor: pointer;
+	transition: box-shadow ease-out 0.2s;
 
 	display: flex;
 	align-items: center;
@@ -56,6 +57,10 @@ const props = withDefaults(defineProps<ButtonHTMLAttributes & ComponentProps>(),
 
 	&[disabled] {
 		cursor: not-allowed !important;
+	}
+
+	&:hover {
+		box-shadow: 0 4px 0 -1px var(--dark-blue);
 	}
 }
 </style>

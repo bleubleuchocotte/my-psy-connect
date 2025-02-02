@@ -1,14 +1,8 @@
 <template>
 	<div class="footer-legal-links">
-		<UILink class="p">
-			Politique de Confidentialité
-		</UILink>
-		<UILink class="p">
+		<NuxtLink prefetch class="p reset-ua" href="/mentions-legales">
 			Mentions légales
-		</UILink>
-		<UILink class="p">
-			Politiques des cookies
-		</UILink>
+		</NuxtLink>
 	</div>
 </template>
 
@@ -16,6 +10,7 @@
 .footer-legal-links {
 	display: flex;
 	align-items: center;
+	color: var(--dark-blue);
 	@include gap(20);
 
 	@media not #{$desktop} {

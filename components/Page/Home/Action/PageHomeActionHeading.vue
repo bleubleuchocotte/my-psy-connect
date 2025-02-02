@@ -19,8 +19,8 @@ import { LucideMail } from "lucide-vue-next";
 			</p>
 		</template>
 		<template #cta>
-			<NuxtLink class="page-home-action-heading__cta reset-ua button" href="/formulaire">
-				Rejoignez-nous <LucideMail stroke="var(--white)" stroke-width="2" />
+			<NuxtLink class="page-home-action-heading__cta reset-ua button" hover="dark-blue-border" href="/formulaire">
+				Rejoignez-nous <LucideMail stroke-width="2" />
 			</NuxtLink>
 		</template>
 	</UIContainerHeading>

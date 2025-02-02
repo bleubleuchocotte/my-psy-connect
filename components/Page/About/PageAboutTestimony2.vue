@@ -15,7 +15,7 @@
 		</UIContainerHeading>
 		<UIContainerContent class="page-about-testimony-2__content">
 			<template #content>
-				<iframe width="920" height="315" src="https://www.youtube.com/embed/j1Sli7ocyrQ?si=dyMzkMd7ljsQJrfI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
+				<iframe width="920" height="315" src="https://www.youtube-nocookie.com/embed/j1Sli7ocyrQ?si=dyMzkMd7ljsQJrfI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
 			</template>
 		</UIContainerContent>
 	</UIContainer>

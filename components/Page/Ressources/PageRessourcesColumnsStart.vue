@@ -38,7 +38,7 @@ import { LucideLightbulb, LucideNewspaper, LucideTvMinimalPlay } from "lucide-vu
 				En savoir plus
 			</template>
 		</PageRessourcesColumnsItem>
-		<PageRessourcesColumnsItem youtube="https://www.youtube.com/embed/zTgt3WBR8BM?si=oPf_SDHGXSft1J4W">
+		<PageRessourcesColumnsItem youtube="https://www.youtube-nocookie.com/embed/zTgt3WBR8BM?si=oPf_SDHGXSft1J4W">
 			<template #icon>
 				<LucideTvMinimalPlay stroke="var(--green)" stroke-width="2" />
 			</template>
@@ -49,7 +49,7 @@ import { LucideLightbulb, LucideNewspaper, LucideTvMinimalPlay } from "lucide-vu
 				Ce documentaire explore les témoignages de personnes dont le travail rêvé s'est transformé en cauchemar, menant à une perte de sens et à l'épuisement professionnel. Il analyse les causes profondes du burn-out et propose des pistes pour y remédier.
 			</template>
 		</PageRessourcesColumnsItem>
-		<PageRessourcesColumnsItem youtube="https://www.youtube.com/embed/9I-VAHFjMgQ?si=hQMkpmYjeTLn7LUS">
+		<PageRessourcesColumnsItem youtube="https://www.youtube-nocookie.com/embed/9I-VAHFjMgQ?si=hQMkpmYjeTLn7LUS">
 			<template #icon>
 				<LucideTvMinimalPlay stroke="var(--green)" stroke-width="2" />
 			</template>

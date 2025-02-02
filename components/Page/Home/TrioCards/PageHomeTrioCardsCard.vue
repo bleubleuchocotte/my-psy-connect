@@ -18,8 +18,8 @@ defineProps<ComponentProps>();
 			<slot name="content" />
 		</div>
 
-		<NuxtLink class="home-card-post-hero__cta reset-ua button" href="/services">
-			En savoir plus <LucideArrowUpRight stroke="var(--dark-blue)" stroke-width="2" />
+		<NuxtLink class="home-card-post-hero__cta reset-ua button" hover="transparent" href="/services">
+			En savoir plus <LucideArrowUpRight stroke-width="2" />
 		</NuxtLink>
 	</div>
 </template>

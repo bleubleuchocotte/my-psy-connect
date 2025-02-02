@@ -6,12 +6,12 @@ const route = useRoute();
 
 <template>
 	<div class="footer-controls">
-		<NuxtLink v-if="route.name !== 'formulaire'" class="footer-controls__join reset-ua button" href="/formulaire">
-			Rejoignez-nous <LucideSmilePlus stroke="var(--white)" stroke-width="2" />
+		<NuxtLink v-if="route.name !== 'formulaire'" class="footer-controls__join reset-ua button" hover="green" href="/formulaire">
+			Rejoignez-nous <LucideSmilePlus stroke-width="2" />
 		</NuxtLink>
 
-		<NuxtLink class="footer-controls__ask reset-ua button" href="mailto:quentin.mypsy@gmail.com">
-			Une question ? <LucideMail stroke="var(--dark-blue)" stroke-width="2" />
+		<NuxtLink class="footer-controls__ask reset-ua button" hover="dark-blue" href="mailto:quentin.mypsy@gmail.com">
+			Une question ? <LucideMail stroke-width="2" />
 		</NuxtLink>
 	</div>
 </template>
