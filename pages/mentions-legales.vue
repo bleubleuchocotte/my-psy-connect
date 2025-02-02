@@ -96,10 +96,9 @@
 			</h2>
 
 			<p>
-				Le site utilise des cookies pour améliorer l'expérience utilisateur et mesurer l'audience. En poursuivant la navigation sur le site, l'utilisateur accepte l'utilisation des cookies conformément à notre politique de gestion des cookies [mettre un lien vers la politique de cookies si disponible].
+				Ce site utilise des vidéos intégrées depuis YouTube, un service fourni par Google LLC. En accédant à ces vidéos, des données peuvent être collectées par YouTube conformément à leurs Conditions d'utilisation et leur Politique de confidentialité.
 				<br><br>
-				Gestion des cookies :
-				L'utilisateur peut configurer son navigateur pour refuser ou supprimer les cookies. Toutefois, certaines fonctionnalités du site pourraient être altérées.
+				Les vidéos YouTube intégrées sur ce site sont fournies par un service tiers. En accédant à ces vidéos, l'utilisateur accepte que des données puissent être collectées par YouTube. Ce site n'exerce aucun contrôle sur cette collecte de données.
 			</p>
 		</div>
 		<div>
