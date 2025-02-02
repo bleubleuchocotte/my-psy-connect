@@ -26,7 +26,7 @@ defineProps<ComponentProps>();
 
 		<div v-if="$slots.logo || $slots.cta" class="page-ressources-columns-item__end">
 			<slot v-if="$slots.logo" name="logo" />
-			<NuxtLink v-if="$slots.cta" :href class="reset-ua button" hover="dark-blue-border">
+			<NuxtLink v-if="$slots.cta" :href class="reset-ua button" hover="dark-blue-border" target="_blank">
 				<slot name="cta" />
 				<LucideArrowUpRight stroke-width="2" />
 			</NuxtLink>

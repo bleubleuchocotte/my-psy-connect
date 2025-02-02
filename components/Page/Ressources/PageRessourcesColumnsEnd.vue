@@ -22,7 +22,7 @@ import { LucideLightbulb, LucideListTodo, LucideNewspaper, LucideTvMinimalPlay }
 			</template>
 		</PageRessourcesColumnsItem>
 		<PageRessourcesColumnsItem
-			href="https://www.lefigaro.fr/conjoncture/l-obsession-de-la-croissance-encouragerait-une-economie-du-burn-outselon-un-expert-de-l-onu-20241024"
+			href="https://www.lefigaro.fr/conjoncture/l-obsession-de-la-croissance-encouragerait-une-economie-du-burn-out-selon-un-expert-de-l-onu-20241024"
 		>
 			<template #icon>
 				<LucideNewspaper stroke="var(--green)" stroke-width="2" />
