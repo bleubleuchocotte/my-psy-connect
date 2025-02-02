@@ -59,7 +59,7 @@ import { LucideLightbulb, LucideListTodo, LucideNewspaper, LucideTvMinimalPlay }
 				Lire l'article
 			</template>
 		</PageRessourcesColumnsItem>
-		<PageRessourcesColumnsItem youtube="https://www.youtube.com/embed/J_WOlzYriBg?si=YRPDRbEWVETVftjG">
+		<PageRessourcesColumnsItem youtube="https://www.youtube-nocookie.com/embed/J_WOlzYriBg?si=YRPDRbEWVETVftjG">
 			<template #icon>
 				<LucideTvMinimalPlay stroke="var(--green)" stroke-width="2" />
 			</template>
