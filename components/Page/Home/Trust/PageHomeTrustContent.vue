@@ -22,9 +22,9 @@ const isDesktop = useMediaQuery("(min-width: 1024px)", { ssrWidth: 768 });
 			<IconPartnerCCI />
 		</div>
 
-		<NuxtLink class="page-home-trust-content__cta reset-ua button" href="/partenaires">
+		<NuxtLink class="page-home-trust-content__cta reset-ua button" hover="dark-blue" href="/partenaires">
 			En savoir plus sur nos partenaires
-			<LucideArrowUpRight stroke="var(--dark-blue)" stroke-width="2" />
+			<LucideArrowUpRight stroke-width="2" />
 		</NuxtLink>
 	</div>
 </template>

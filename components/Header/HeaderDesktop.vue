@@ -11,9 +11,9 @@ const route = useRoute();
 		<div class="header__absolute">
 			<IconLogoWithText class="header__absolute-logo" />
 
-			<NuxtLink :hide="route.name === 'formulaire'" class="header__absolute-cta reset-ua button" href="/formulaire">
+			<NuxtLink :hide="route.name === 'formulaire'" class="header__absolute-cta reset-ua button" hover="green" href="/formulaire">
 				<span>
-					Rejoignez-nous
+					Contactez-nous
 				</span>
 				<LucideMail stroke="var(--beige)" stroke-width="2" />
 			</NuxtLink>

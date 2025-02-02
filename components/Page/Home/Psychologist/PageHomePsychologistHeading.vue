@@ -19,7 +19,7 @@ import { LucideArrowUpRight } from "lucide-vue-next";
 			</p>
 		</template>
 		<template #cta>
-			<NuxtLink class="page-home-psychologist-heading__cta reset-ua button" href="/equipe">
+			<NuxtLink class="page-home-psychologist-heading__cta reset-ua button" hover="dark-blue-border" href="/equipe">
 				Découvrir <LucideArrowUpRight stroke="var(--white)" stroke-width="2" />
 			</NuxtLink>
 		</template>

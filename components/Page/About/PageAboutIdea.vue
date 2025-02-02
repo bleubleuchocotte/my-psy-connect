@@ -24,7 +24,7 @@
 						<h3>Quentin Joubert</h3>
 						<p>Fondateur de MyPsy</p>
 					</div>
-					<NuxtLink class="reset-ua button" href="https://www.linkedin.com/in/quentin-joubert-marketing-commercial/">
+					<NuxtLink class="reset-ua button" hover="border-green" href="https://www.linkedin.com/in/quentin-joubert-marketing-commercial/">
 						Linkedin <IconLinkedIn />
 					</NuxtLink>
 				</div>
