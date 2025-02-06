@@ -117,20 +117,15 @@
 
 <style scoped lang="scss">
 .page-mentions-legales {
-	display: flex;
-	flex-direction: column;
-	gap: rem(94);
-
-	@media not #{$desktop} {
-		gap: rem(40);
-	}
-
 	section {
+		display: flex;
+		flex-direction: column;
+		gap: rem(94);
+
 		padding-inline: rem(118);
 		padding-block: rem(94);
 		@media not #{$desktop} {
 			padding-inline: rem(20);
-			padding-block: rem(94);
 		}
 	}
 
