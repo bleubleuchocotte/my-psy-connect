@@ -13,40 +13,40 @@
 				</h2>
 
 				<p>
-					Conformément aux dispositions des articles 6-III et 19 de la Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est porté à la connaissance des utilisateurs du site [Nom du Site] les présentes mentions légales.
+					Conformément aux dispositions des articles 6-III et 19 de la Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est porté à la connaissance des utilisateurs du site MypsyConnect les présentes mentions légales.
 					<br><br>
 					Éditeur du Site :
 					<br>
-					Nom de l'éditeur : [Nom de la société ou du responsable]
+					Nom de l'éditeur : Quentin Joubert
 					<br>
-					Statut juridique : [SARL, SAS, Auto-entrepreneur, etc.]
+					Statut juridique : SASU
 					<br>
-					Siège social : [Adresse complète]
+					Siège social : 263 chemin des Grangettes 38660 Lumbin
 					<br>
-					SIRET : [Numéro de SIRET]
+					SIRET : 93134629000014
 					<br>
-					RCS : [Ville et numéro d'immatriculation]
+					RCS : RCS Grenoble
 					<br>
-					Numéro de TVA intracommunautaire : [Numéro]
+					Numéro de TVA intracommunautaire : FR54931346290
 					<br>
-					Email : [Adresse email]
+					Email : quentin.mypsy@gmail.com
 					<br>
-					Téléphone : [Numéro de téléphone]
+					Téléphone : +33 6 86 45 85 57
 					<br><br>
 					Directeur de la publication :
 					<br>
-					Nom : [Nom du responsable]
+					Nom : Quentin Joubert
 					<br>
-					Contact : [Email ou numéro de téléphone]
+					Contact : quentin.mypsy@gmail.com
 					<br><br>
 					Hébergeur du Site :
 					<br>
-					Nom de l'hébergeur : [Nom de l'hébergeur]
+					Nom de l'hébergeur : Netlify
 					<br>
-					Adresse : [Adresse complète de l'hébergeur]
+					Adresse : 2325 3RD STREET,SUITE 215, SAN FRANCISCO, CA 94107 (USA).
+
 					<br>
-					Téléphone : [Numéro de téléphone]
-					Site web : [URL]
+					Site web : https://www.netlify.com/
 				</p>
 			</div>
 			<div class="page-mentions-legales__section">
@@ -78,17 +78,17 @@
 				<p>
 					Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés du 6 janvier 1978 modifiée, l'utilisateur dispose d'un droit d'accès, de rectification, de suppression et de portabilité des données le concernant.
 					<br><br>
-					Responsable du traitement : [Nom ou entité responsable]
+					Responsable du traitement : Quentin Joubert
 					<br><br>
 					Finalité des traitements :
-					Les données collectées sur le site sont destinées à [indiquer les finalités : gestion des commandes, newsletter, analyse statistique, etc.].
+					Les données collectées sur le site sont destinées à la newsletter
 					<br><br>
 					Exercice des droits :
 					Pour exercer ces droits, l'utilisateur peut contacter :
 					<br><br>
-					Par courrier : [Adresse]
+					Par courrier : 263 chemin des Grangettes 38660 Lumbin
 					<br><br>
-					Par email : [Adresse email]
+					Par email : quentin.mypsy@gmail.com
 				</p>
 			</div>
 			<div class="page-mentions-legales__section">
