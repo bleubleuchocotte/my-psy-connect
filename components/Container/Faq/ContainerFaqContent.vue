@@ -10,7 +10,7 @@ const questions = [
 	},
 	{
 		title: "Qu'est-ce que MyPsy et à qui s'adresse cette plateforme ?",
-		content: "MyPsy est une plateforme dédiée au soutien psychologique, spécialement conçue pour les cadres,responsables, et employés confrontés au stress, au burnout, et à la souffrance au travail. Notre objectif est de vous accompagner vers un meilleur équilibre mental grâce à des solutions adaptées à vos besoins professionnels.",
+		content: "MyPsy est une plateforme dédiée au soutien psychologique, spécialement conçue pour les entrepreneurs, freelances, cadres, responsables, et employés confrontés au stress, au burnout, et à la souffrance au travail. Notre objectif est de vous accompagner vers un meilleur équilibre mental grâce à des solutions adaptées à vos besoins professionnels.",
 	},
 	{
 		title: "Quelles sont les principales fonctionnalités proposées par MyPsy ?",
