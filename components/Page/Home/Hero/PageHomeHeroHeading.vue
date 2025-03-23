@@ -9,7 +9,7 @@
 
 		<template #text>
 			<h2 class="p">
-				MyPsy, la plateforme dédiée aux employés<br>
+				MyPsy, la plateforme dédiée aux entrepreneurs, freelances et employés<br>
 				en souffrance au travail ou en burn-out
 			</h2>
 		</template>
